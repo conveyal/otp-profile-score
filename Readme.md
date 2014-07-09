@@ -1,7 +1,7 @@
 
 # otp-profile-score
 
-Score OTP profiles
+Score OTP journey profiles.
 
 ## Installation
 

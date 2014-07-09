@@ -35,6 +35,14 @@ var DEFAULT_FACTORS = {
 };
 
 /**
+ * Default settings
+ */
+
+var DEFAULT_SETTINGS = {
+  timeWindow: 120 // minutes
+};
+
+/**
  * Expose `ProfileScore`
  */
 
@@ -44,9 +52,9 @@ module.exports = ProfileScore;
  * Process & score an OTP Profile response. Format text, tally statistics, score options
  */
 
-function ProfileScore(factors) {
+function ProfileScore(factors, settings) {
   this.factor = factors || DEFAULT_FACTORS;
-  this.settings = {};
+  this.settings = settings || DEFAULT_SETTINGS;
   this.scaleCalories = scaleCalories;
 }
 
