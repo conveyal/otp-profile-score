@@ -4,7 +4,9 @@
   "description": "Score OTP profiles",
   "version": "0.0.1",
   "keywords": [],
-  "dependencies": {},
+  "dependencies": {
+    "mbostock/d3": "*"
+  },
   "development": {},
   "license": "MIT",
   "main": "index.js",

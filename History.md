@@ -1,7 +1,7 @@
 
 ## Latest
 
-*
+* Added D3 as a dependency
 
 ## 0.0.1
 
