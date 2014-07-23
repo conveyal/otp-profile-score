@@ -2,7 +2,7 @@
   "name": "otp-profile-score",
   "repo": "conveyal/otp-profile-score",
   "description": "Score OTP profiles",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "keywords": [],
   "dependencies": {
     "mbostock/d3": "*"
