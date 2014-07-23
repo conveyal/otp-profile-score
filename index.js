@@ -141,7 +141,7 @@ ProfileScore.prototype.tally = function(o) {
   o.transfers = o.segments.length;
 
   // Set emissions for all, will show negative for bike/walk
-  o.emissions = this.factor.mpg / o.totalDistance * CO2_PER_GALLON;
+  o.emissions = o.totalDistance / this.factor.mpg * CO2_PER_GALLON;
 
   // Set the primary mode
   o.mode = o.summary.length < 8 ? o.summary.toLowerCase() : primaryMode(o);
