@@ -32,30 +32,21 @@ var DEFAULT_RATES = {
 };
 
 /**
- * Default settings
- */
-
-var DEFAULT_SETTINGS = {
-  timeWindow: 120 // minutes
-};
-
-/**
  * Expose `ProfileScore`
  */
 
 module.exports = ProfileScore;
 
 /**
- * Process & score an OTP Profile response. Format text, tally statistics, score options
+ * Process & score an OTP Profile response. Tally statistics, score options
  */
 
 function ProfileScore(opts) {
   opts = opts || {};
 
-  this.factors = opts.factors || DEFAULT_FACTORS;
+  this.factors = opts.factors || DEFAULT_TIME_FACTORS;
   this.rates = opts.rates || DEFAULT_RATES;
-  this.settings = opts.settings || DEFAULT_SETTINGS;
-  this.transform = opts.transform || function(_){ return _ };
+  this.transform = opts.transform || function(_){ return _; };
 }
 
 /**
@@ -160,7 +151,6 @@ ProfileScore.prototype.tally = function(o) {
       break;
     default: // Transit only for now
       o.calories = transitCals(o, this.rates.calsWalking);
-      o.frequency = frequency(o, this.settings.timeWindow);
       break;
   }
 
