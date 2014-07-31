@@ -46,7 +46,9 @@ function ProfileScore(opts) {
 
   this.factors = opts.factors || DEFAULT_TIME_FACTORS;
   this.rates = opts.rates || DEFAULT_RATES;
-  this.transform = opts.transform || function(_){ return _; };
+  this.transform = opts.transform || function(_) {
+    return _;
+  };
 }
 
 /**
