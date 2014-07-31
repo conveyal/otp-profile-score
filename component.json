@@ -2,7 +2,7 @@
   "name": "otp-profile-score",
   "repo": "conveyal/otp-profile-score",
   "description": "Score OTP profiles",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "keywords": [ "OpenTripPlanner", "otp", "transit" ],
   "license": "MIT",
   "main": "index.js",

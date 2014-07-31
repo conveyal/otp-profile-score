@@ -1,4 +1,10 @@
 
+## 0.1.0 — 2014-07-31
+
+* Split factors into factors & rates
+* Add general "transform" function
+* Remove D3 dependency
+
 ## 0.0.3 — 2014-07-23
 
 * Fixed emissions calculation
