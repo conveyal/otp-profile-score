@@ -1,5 +1,3 @@
-var d3 = require('d3');
-
 /**
  * Constants
  */
@@ -9,29 +7,28 @@ var METERS_TO_MILES = 0.000621371;
 var MINUTE = 60;
 
 /**
- * Calorie Scale
- */
-
-var scaleCalories = d3.scale.linear()
-  .domain([0, 100, 200])
-  .range([0, 1, 0]);
-
-/**
  * Default factor values
  */
 
-var DEFAULT_FACTORS = {
+var DEFAULT_TIME_FACTORS = {
   bikeParking: 1,
   calories: 3,
-  calsBiking: 10,
-  calsWalking: 4.4,
   carParking: 5,
-  carParkingCost: 10,
   co2: 0.5,
   cost: 5,
-  mileageRate: 0.56, // IRS reimbursement rate per mile http://www.irs.gov/2014-Standard-Mileage-Rates-for-Business,-Medical-and-Moving-Announced
-  mpg: 21.4,
   transfer: 5
+};
+
+/**
+ * Default costs
+ */
+
+var DEFAULT_RATES = {
+  calsBiking: 10,
+  calsWalking: 4.4,
+  carParkingCost: 10,
+  mileageRate: 0.56, // IRS reimbursement rate per mile http://www.irs.gov/2014-Standard-Mileage-Rates-for-Business,-Medical-and-Moving-Announced
+  mpg: 21.4
 };
 
 /**
@@ -52,10 +49,13 @@ module.exports = ProfileScore;
  * Process & score an OTP Profile response. Format text, tally statistics, score options
  */
 
-function ProfileScore(factors, settings) {
-  this.factor = factors || DEFAULT_FACTORS;
-  this.settings = settings || DEFAULT_SETTINGS;
-  this.scaleCalories = scaleCalories;
+function ProfileScore(opts) {
+  opts = opts || {};
+
+  this.factors = opts.factors || DEFAULT_FACTORS;
+  this.rates = opts.rates || DEFAULT_RATES;
+  this.settings = opts.settings || DEFAULT_SETTINGS;
+  this.transform = opts.transform || function(_){ return _ };
 }
 
 /**
@@ -87,7 +87,8 @@ ProfileScore.prototype.processOption = function(o) {
   // Score the option
   o.score = this.score(o);
 
-  return o;
+  // Apply transformation and return
+  return this.transform(o);
 };
 
 /**
@@ -100,11 +101,11 @@ ProfileScore.prototype.score = function(o) {
   switch (o.mode) {
     case 'car':
       // Add time for parking
-      score += this.factor.carParking;
+      score += this.factors.carParking;
       break;
     case 'bicycle':
       // Add time for locking your bike
-      score += this.factor.bikeParking;
+      score += this.factors.bikeParking;
       break;
     case 'walk':
 
@@ -115,16 +116,16 @@ ProfileScore.prototype.score = function(o) {
   }
 
   // Add time for each transfer
-  score += o.transfers * this.factor.transfer;
+  score += o.transfers * this.factors.transfer;
 
   // Add time for each dollar spent
-  score += o.totalCost * this.factor.cost;
+  score += o.totalCost * this.factors.cost;
 
   // Subtract time for calories burned
-  score -= this.scaleCalories(o.calories) * this.factor.calories;
+  score -= o.calories * this.factors.calories;
 
-  // Add time for CO2 emissions
-  score += o.emissions * this.factor.co2;
+  // Add time for CO2 emissions (or add negative val for bike/walking offset)
+  score += o.emissions * this.factors.co2;
 
   return score;
 };
@@ -140,24 +141,25 @@ ProfileScore.prototype.tally = function(o) {
   o.totalDistance = walkStepsDistance(o);
   o.transfers = o.segments.length;
 
-  // Set emissions for all, will show negative for bike/walk
-  o.emissions = o.totalDistance / this.factor.mpg * CO2_PER_GALLON;
+  // Set emissions for all, will show negative for bike/walk/transit
+  o.emissions = -o.totalDistance / this.rates.mpg * CO2_PER_GALLON;
 
   // Set the primary mode
   o.mode = o.summary.length < 8 ? o.summary.toLowerCase() : primaryMode(o);
 
   switch (o.mode) {
     case 'car':
-      o.totalCost += this.factor.mileageRate * o.totalDistance + this.factor.carParkingCost;
+      o.emissions = -o.emissions;
+      o.totalCost += this.rates.mileageRate * o.totalDistance + this.rates.carParkingCost;
       break;
     case 'bicycle':
-      o.calories = this.factor.calsBiking * o.time;
+      o.calories = this.rates.calsBiking * o.time;
       break;
     case 'walk':
-      o.calories = this.factor.calsWalking * o.time;
+      o.calories = this.rates.calsWalking * o.time;
       break;
     default: // Transit only for now
-      o.calories = transitCals(o, this.factor.calsWalking);
+      o.calories = transitCals(o, this.rates.calsWalking);
       o.frequency = frequency(o, this.settings.timeWindow);
       break;
   }

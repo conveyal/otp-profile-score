@@ -3,11 +3,7 @@
   "repo": "conveyal/otp-profile-score",
   "description": "Score OTP profiles",
   "version": "0.0.3",
-  "keywords": [],
-  "dependencies": {
-    "mbostock/d3": "*"
-  },
-  "development": {},
+  "keywords": [ "OpenTripPlanner", "otp", "transit" ],
   "license": "MIT",
   "main": "index.js",
   "scripts": [

@@ -11,15 +11,12 @@
     "url": "git@github.com:conveyal/otp-profile-score.git"
   },
   "keywords": [
-    "OTP"
+    "OTP", "OpenTripPlanner"
   ],
   "author": "Conveyal",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/conveyal/otp-profile-score/issues"
   },
-  "homepage": "https://github.com/conveyal/otp-profile-score",
-  "dependencies": {
-    "d3": "^3.4.9"
-  }
+  "homepage": "https://github.com/conveyal/otp-profile-score"
 }
