@@ -77,11 +77,13 @@ ProfileScore.prototype.processOption = function(o) {
   // Tally the data
   o = this.tally(o);
 
+  // Apply transformations
+  o = this.transform(o);
+
   // Score the option
   o.score = this.score(o);
 
-  // Apply transformation and return
-  return this.transform(o);
+  return o;
 };
 
 /**
