@@ -1,6 +1,6 @@
 {
   "name": "otp-profile-score",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Score OTP profiles",
   "main": "index.js",
   "scripts": {

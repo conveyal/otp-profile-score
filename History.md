@@ -1,4 +1,9 @@
 
+## 0.3.0 — 2014-08-12
+
+* Factors can now be functions
+* Consume new OTP profile format
+
 ## 0.2.0 — 2014-08-04
 
 * Transform, then score

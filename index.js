@@ -1,10 +1,12 @@
+var clone = require('clone');
+
 /**
  * Constants
  */
 
 var CO2_PER_GALLON = 8.887; // Kilograms of CO2 burned per gallon of gasoline
 var METERS_TO_MILES = 0.000621371;
-var MINUTE = 60;
+var SECONDS_TO_HOURS = 1 / 60 / 60;
 
 /**
  * Default factor values
@@ -12,7 +14,7 @@ var MINUTE = 60;
 
 var DEFAULT_TIME_FACTORS = {
   bikeParking: 1,
-  calories: 3,
+  calories: -3,
   carParking: 5,
   co2: 0.5,
   cost: 5,
@@ -24,11 +26,12 @@ var DEFAULT_TIME_FACTORS = {
  */
 
 var DEFAULT_RATES = {
-  calsBiking: 10,
-  calsWalking: 4.4,
+  bikeSpeed: 4.1, // in m/s
   carParkingCost: 10,
   mileageRate: 0.56, // IRS reimbursement rate per mile http://www.irs.gov/2014-Standard-Mileage-Rates-for-Business,-Medical-and-Moving-Announced
-  mpg: 21.4
+  mpg: 21.4,
+  walkSpeed: 1.4, // in m/s
+  weight: 75 // in kilograms
 };
 
 /**
@@ -46,9 +49,6 @@ function ProfileScore(opts) {
 
   this.factors = opts.factors || DEFAULT_TIME_FACTORS;
   this.rates = opts.rates || DEFAULT_RATES;
-  this.transform = opts.transform || function(_) {
-    return _;
-  };
 }
 
 /**
@@ -56,29 +56,33 @@ function ProfileScore(opts) {
  */
 
 ProfileScore.prototype.processOptions = function(options) {
+  var id = 0;
+  var processed = [];
   for (var i = 0; i < options.length; i++) {
-    // Add an id
-    options[i].id = 'option_' + i;
-    options[i] = this.processOption(options[i]);
+    var o = options[i];
+
+    // Split each option by access mode and score individually
+    for (var j = 0; j < o.access.length; j++) {
+      var opt = clone(o);
+      opt.access = [opt.access[j]];
+      processed.push(this.processOption(opt));
+    }
   }
 
-  options.sort(function(a, b) {
+  processed.sort(function(a, b) {
     return a.score - b.score;
   });
 
-  return options;
+  return processed;
 };
 
 /**
- * Process option
+ * Process option, only uses the first access and egress modes given
  */
 
 ProfileScore.prototype.processOption = function(o) {
   // Tally the data
   o = this.tally(o);
-
-  // Apply transformations
-  o = this.transform(o);
 
   // Score the option
   o.score = this.score(o);
@@ -92,35 +96,36 @@ ProfileScore.prototype.processOption = function(o) {
 
 ProfileScore.prototype.score = function(o) {
   var score = o.time;
+  var totalCalories = 0;
 
-  switch (o.mode) {
-    case 'car':
-      // Add time for parking
-      score += this.factors.carParking;
-      break;
-    case 'bicycle':
-      // Add time for locking your bike
-      score += this.factors.bikeParking;
-      break;
-    case 'walk':
+  o.modes.forEach(function(mode) {
+    switch (o.mode) {
+      case 'car':
+        // Add time for parking
+        score += af(1, this.factors.carParking);
 
-      break;
-    default: // Transit only
-
-      break;
-  }
+        // Add time for CO2 emissions
+        score += af(o.emissions, this.factors.co2);
+        break;
+      case 'bicycle':
+        // Add time for locking your bike
+        score += af(1, this.factors.bikeParking);
+        totalCalories += o.bikeCalories;
+        break;
+      case 'walk':
+        totalCalories += o.walkCalories;
+        break;
+    }
+  });
 
   // Add time for each transfer
-  score += o.transfers * this.factors.transfer;
+  score += af(o.transfers, this.factors.transfer);
 
   // Add time for each dollar spent
-  score += o.totalCost * this.factors.cost;
+  score += af(o.cost, this.factors.cost);
 
-  // Subtract time for calories burned
-  score -= o.calories * this.factors.calories;
-
-  // Add time for CO2 emissions (or add negative val for bike/walking offset)
-  score += o.emissions * this.factors.co2;
+  // Add/subtract time for calories
+  score += af(totalCalories, this.factors.calories);
 
   return score;
 };
@@ -130,46 +135,67 @@ ProfileScore.prototype.score = function(o) {
  */
 
 ProfileScore.prototype.tally = function(o) {
-  o.time = o.stats.avg / MINUTE;
+  o.time = o.stats.avg / 60;
+
+  // Defaults
   o.calories = 0;
-  o.totalCost = totalFare(o);
-  o.totalDistance = walkStepsDistance(o);
-  o.transfers = o.segments.length;
+  o.cost = 0;
+  o.emissions = 0;
+  o.modes = [];
+  o.transfers = 0;
 
-  // Set emissions for all, will show negative for bike/walk/transit
-  o.emissions = -o.totalDistance / this.rates.mpg * CO2_PER_GALLON;
+  // Bike/Drive/Walk distances
+  o.bikeDistance = 0;
+  o.driveDistance = 0;
+  o.walkDistance = 0;
 
-  // Set the primary mode
-  o.mode = o.summary.length < 8 ? o.summary.toLowerCase() : primaryMode(o);
-
-  switch (o.mode) {
+  // Tally access
+  o.modes.push(o.access[0].mode.toLowerCase());
+  switch (o.access[0].mode.toLowerCase()) {
     case 'car':
-      o.emissions = -o.emissions;
-      o.totalCost += this.rates.mileageRate * o.totalDistance + this.rates.carParkingCost;
+      o.driveDistance = walkStepsDistance(o.access[0]);
+      o.emissions = o.driveDistance / this.rates.mpg * CO2_PER_GALLON;
+      o.cost += this.rates.mileageRate * o.driveDistance + this.rates.carParkingCost;
       break;
     case 'bicycle':
-      o.calories = this.rates.calsBiking * o.time;
+      o.bikeDistance = walkStepsDistance(o.access[0]);
+      o.bikeCalories = bikeCal(this.rates.weight, (o.bikeDistance / this.rates.bikeSpeed) *
+        SECONDS_TO_HOURS);
       break;
     case 'walk':
-      o.calories = this.rates.calsWalking * o.time;
-      break;
-    default: // Transit only for now
-      o.calories = transitCals(o, this.rates.calsWalking);
+      o.walkDistance += walkStepsDistance(o.access[0]);
       break;
   }
 
+  // Tally transit
+  if (o.transit && o.transit.length > 0) {
+    o.trips = Infinity;
+    o.transit.forEach(function(segment) {
+      if (segment.fares && segment.fares.length > 0)
+        o.cost += segment.fares[0].peak;
+
+      var mode = segment.mode.toLowerCase();
+      if (o.modes.indexOf(mode) === -1) o.modes.push(mode);
+
+      var trips = segment.segmentPatterns[0].nTrips;
+      if (trips < o.trips) o.trips = trips;
+
+      o.walkDistance += segment.walkDistance * METERS_TO_MILES;
+    });
+  }
+
+  // Tally egress
+  if (o.egress && o.egress.length > 0) {
+    if (o.modes.indexOf('walk') === -1) o.modes.push('walk');
+    o.walkDistance += walkStepsDistance(o.egress[0]);
+  }
+
+  // Set the walking calories burned
+  o.walkCalories = walkCal(this.rates.weight, (o.walkDistance / this.rates.walkSpeed) *
+    SECONDS_TO_HOURS);
+
   return o;
 };
-
-/**
- * Transit Walking Segment Cals
- */
-
-function transitCals(o, calsWalking) {
-  return o.segments.reduce(function(calories, segment) {
-    return calories + calsWalking * (segment.walkTime / MINUTE);
-  }, 0) + calsWalking * (o.finalWalkTime / MINUTE);
-}
 
 /**
  * Total Distance of Walk Steps
@@ -183,44 +209,32 @@ function walkStepsDistance(o) {
 }
 
 /**
- * Calculate the total fare
+ * Find MET scores here: http://appliedresearch.cancer.gov/atus-met/met.php
+ *
+ * Cycling: 8.0
+ * Walking: 3.8
  */
 
-function totalFare(o) {
-  if (!o.fares || o.fares.length < 1) return 0;
-  return o.fares.reduce(function(total, fare) {
-    return total + fare.peak;
-  }, 0);
+function bikeCal(kg, hours) {
+  return caloriesBurned(8.0, kg, hours);
+}
+
+function walkCal(kg, hours) {
+  return caloriesBurned(3.8, kg, hours);
+}
+
+function caloriesBurned(met, kg, hours) {
+  return met * kg * hours;
 }
 
 /**
- * Get primary mode
+ * Apply factor
  */
 
-function primaryMode(o) {
-  var max = -Infinity;
-  var mode = '';
-
-  for (var i = 0; i < o.segments.length; i++) {
-    var time = o.segments[i].waitStats.avg + o.segments[i].rideStats.avg;
-    if (time > max) mode = o.segments[i].mode.toLowerCase();
+function af(v, f) {
+  if (typeof f === 'function') {
+    return f(v);
+  } else {
+    return f * v;
   }
-
-  return mode;
-}
-
-/**
- * Get the frequency of a transit option
- */
-
-function frequency(o, timeWindow) {
-  var patterns = o.segments.reduce(function(memo, segment) {
-    return memo.concat(segment.segmentPatterns);
-  }, []);
-
-  return patterns.reduce(function(memo, pattern) {
-    var nTrips = timeWindow / pattern.nTrips;
-    if (nTrips < memo) return nTrips;
-    else return memo;
-  }, Infinity);
 }
