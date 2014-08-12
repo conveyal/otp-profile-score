@@ -155,7 +155,7 @@ ProfileScore.prototype.tally = function(o) {
     case 'car':
       o.driveDistance = walkStepsDistance(o.access[0]);
 
-      o.carCost = this.rates.mileageRate * o.driveDistance + this.rates.carParkingCost;
+      o.carCost = this.rates.mileageRate * (o.driveDistance * METERS_TO_MILES) + this.rates.carParkingCost;
       o.cost += o.carCost;
       o.emissions = o.driveDistance / this.rates.mpg * CO2_PER_GALLON;
       break;
@@ -184,7 +184,7 @@ ProfileScore.prototype.tally = function(o) {
       var trips = segment.segmentPatterns[0].nTrips;
       if (trips < o.trips) o.trips = trips;
 
-      o.walkDistance += segment.walkDistance * METERS_TO_MILES;
+      o.walkDistance += segment.walkDistance;
     });
 
     o.cost += o.transitCost;
@@ -212,7 +212,7 @@ ProfileScore.prototype.tally = function(o) {
 
 function walkStepsDistance(o) {
   if (!o.walkSteps || o.walkSteps.length < 1) return 0;
-  return METERS_TO_MILES * o.walkSteps.reduce(function(distance, step) {
+  return o.walkSteps.reduce(function(distance, step) {
     return distance + step.distance;
   }, 0);
 }
