@@ -154,8 +154,10 @@ ProfileScore.prototype.tally = function(o) {
   switch (o.access[0].mode.toLowerCase()) {
     case 'car':
       o.driveDistance = walkStepsDistance(o.access[0]);
+
+      o.carCost = this.rates.mileageRate * o.driveDistance + this.rates.carParkingCost;
+      o.cost += o.carCost;
       o.emissions = o.driveDistance / this.rates.mpg * CO2_PER_GALLON;
-      o.cost += this.rates.mileageRate * o.driveDistance + this.rates.carParkingCost;
       break;
     case 'bicycle':
       o.bikeDistance = walkStepsDistance(o.access[0]);
@@ -169,10 +171,12 @@ ProfileScore.prototype.tally = function(o) {
 
   // Tally transit
   if (o.transit && o.transit.length > 0) {
+    o.transitCost = 0;
     o.trips = Infinity;
+
     o.transit.forEach(function(segment) {
       if (segment.fares && segment.fares.length > 0)
-        o.cost += segment.fares[0].peak;
+        o.transitCost += segment.fares[0].peak;
 
       var mode = segment.mode.toLowerCase();
       if (o.modes.indexOf(mode) === -1) o.modes.push(mode);
@@ -182,6 +186,8 @@ ProfileScore.prototype.tally = function(o) {
 
       o.walkDistance += segment.walkDistance * METERS_TO_MILES;
     });
+
+    o.cost += o.transitCost;
   }
 
   // Tally egress
