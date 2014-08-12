@@ -200,6 +200,9 @@ ProfileScore.prototype.tally = function(o) {
   o.walkCalories = walkCal(this.rates.weight, (o.walkDistance / this.rates.walkSpeed) *
     SECONDS_TO_HOURS);
 
+  // Total calories
+  o.calories = o.bikeCalories + o.walkCalories;
+
   return o;
 };
 
