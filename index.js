@@ -1,7 +1,7 @@
 var clone;
 try {
   clone = require('clone');
-} catch(e) {
+} catch (e) {
   clone = require('component-clone');
 }
 
@@ -145,11 +145,13 @@ ProfileScore.prototype.tally = function(o) {
   o.time = o.stats.avg / 60;
 
   // Defaults
+  o.bikeCalories = 0;
   o.calories = 0;
   o.cost = 0;
   o.emissions = 0;
   o.modes = [];
   o.transfers = 0;
+  o.walkCalories = 0;
 
   // Bike/Drive/Walk distances
   o.bikeDistance = 0;
@@ -208,8 +210,9 @@ ProfileScore.prototype.tally = function(o) {
   }
 
   // Set the walking calories burned
-  o.walkCalories = caloriesBurned(WALKING_MET, this.rates.weight, (o.walkDistance /
-    this.rates.walkSpeed) * SECONDS_TO_HOURS) || 0;
+  if (o.modes.indexOf('walk') !== -1)
+    o.walkCalories = caloriesBurned(WALKING_MET, this.rates.weight, (o.walkDistance /
+      this.rates.walkSpeed) * SECONDS_TO_HOURS) || 0;
 
   // Total calories
   o.calories = o.bikeCalories + o.walkCalories;
