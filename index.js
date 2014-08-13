@@ -183,9 +183,6 @@ ProfileScore.prototype.tally = function(o) {
     o.trips = Infinity;
 
     o.transit.forEach(function(segment) {
-      if (segment.fares && segment.fares.length > 0)
-        o.transitCost += segment.fares[0].peak;
-
       var mode = segment.mode.toLowerCase();
       if (o.modes.indexOf(mode) === -1) o.modes.push(mode);
 
@@ -194,6 +191,12 @@ ProfileScore.prototype.tally = function(o) {
 
       o.walkDistance += segment.walkDistance;
     });
+
+    if (o.fares && o.fares.length) {
+      o.fares.forEach(function(fare) {
+        o.transitCost += fare.peak;
+      });
+    }
 
     o.cost += o.transitCost;
   }
