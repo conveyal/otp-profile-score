@@ -170,8 +170,7 @@ ProfileScore.prototype.tally = function(o) {
     case 'bicycle':
       o.bikeDistance = walkStepsDistance(o.access[0]);
       o.bikeCalories = caloriesBurned(CYCLING_MET, this.rates.weight, (o.bikeDistance /
-          this.rates.bikeSpeed) *
-        SECONDS_TO_HOURS);
+        this.rates.bikeSpeed) * SECONDS_TO_HOURS) || 0;
       break;
     case 'walk':
       o.walkDistance += walkStepsDistance(o.access[0]);
@@ -207,8 +206,7 @@ ProfileScore.prototype.tally = function(o) {
 
   // Set the walking calories burned
   o.walkCalories = caloriesBurned(WALKING_MET, this.rates.weight, (o.walkDistance /
-      this.rates.walkSpeed) *
-    SECONDS_TO_HOURS);
+    this.rates.walkSpeed) * SECONDS_TO_HOURS) || 0;
 
   // Total calories
   o.calories = o.bikeCalories + o.walkCalories;
