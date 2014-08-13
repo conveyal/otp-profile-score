@@ -1,4 +1,9 @@
-var clone = require('clone');
+var clone;
+try {
+  clone = require('clone');
+} catch(e) {
+  clone = require('component-clone');
+}
 
 /**
  * Constants

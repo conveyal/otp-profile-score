@@ -2,6 +2,7 @@
 ## Latest
 
 * Merge in factors & rates instead of replace
+* Add `component-clone` as a Node.js dependency
 
 ## 0.3.0 — 2014-08-12
 
