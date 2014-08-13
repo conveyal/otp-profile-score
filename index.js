@@ -5,8 +5,10 @@ var clone = require('clone');
  */
 
 var CO2_PER_GALLON = 8.887; // Kilograms of CO2 burned per gallon of gasoline
+var CYCLING_MET = 8; // Find MET scores here: http://appliedresearch.cancer.gov/atus-met/met.php
 var METERS_TO_MILES = 0.000621371;
 var SECONDS_TO_HOURS = 1 / 60 / 60;
+var WALKING_MET = 3.8;
 
 /**
  * Default factor values
@@ -47,8 +49,8 @@ module.exports = ProfileScore;
 function ProfileScore(opts) {
   opts = opts || {};
 
-  this.factors = opts.factors || DEFAULT_TIME_FACTORS;
-  this.rates = opts.rates || DEFAULT_RATES;
+  this.factors = merge(DEFAULT_TIME_FACTORS, opts.factors || {});
+  this.rates = merge(DEFAULT_RATES, opts.rates || {});
 }
 
 /**
@@ -155,13 +157,15 @@ ProfileScore.prototype.tally = function(o) {
     case 'car':
       o.driveDistance = walkStepsDistance(o.access[0]);
 
-      o.carCost = this.rates.mileageRate * (o.driveDistance * METERS_TO_MILES) + this.rates.carParkingCost;
+      o.carCost = this.rates.mileageRate * (o.driveDistance * METERS_TO_MILES) +
+        this.rates.carParkingCost;
       o.cost += o.carCost;
       o.emissions = o.driveDistance / this.rates.mpg * CO2_PER_GALLON;
       break;
     case 'bicycle':
       o.bikeDistance = walkStepsDistance(o.access[0]);
-      o.bikeCalories = bikeCal(this.rates.weight, (o.bikeDistance / this.rates.bikeSpeed) *
+      o.bikeCalories = caloriesBurned(CYCLING_MET, this.rates.weight, (o.bikeDistance /
+          this.rates.bikeSpeed) *
         SECONDS_TO_HOURS);
       break;
     case 'walk':
@@ -197,7 +201,8 @@ ProfileScore.prototype.tally = function(o) {
   }
 
   // Set the walking calories burned
-  o.walkCalories = walkCal(this.rates.weight, (o.walkDistance / this.rates.walkSpeed) *
+  o.walkCalories = caloriesBurned(WALKING_MET, this.rates.weight, (o.walkDistance /
+      this.rates.walkSpeed) *
     SECONDS_TO_HOURS);
 
   // Total calories
@@ -218,19 +223,8 @@ function walkStepsDistance(o) {
 }
 
 /**
- * Find MET scores here: http://appliedresearch.cancer.gov/atus-met/met.php
- *
- * Cycling: 8.0
- * Walking: 3.8
+ * Calories burned based on met score, weight and time
  */
-
-function bikeCal(kg, hours) {
-  return caloriesBurned(8.0, kg, hours);
-}
-
-function walkCal(kg, hours) {
-  return caloriesBurned(3.8, kg, hours);
-}
 
 function caloriesBurned(met, kg, hours) {
   return met * kg * hours;
@@ -246,4 +240,13 @@ function af(v, f) {
   } else {
     return f * v;
   }
+}
+
+/**
+ * Merge
+ */
+
+function merge(a, b) {
+  for (var k in b) a[k] = b[k];
+  return a;
 }

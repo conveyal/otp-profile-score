@@ -1,4 +1,8 @@
 
+## Latest
+
+* Merge in factors & rates instead of replace
+
 ## 0.3.0 — 2014-08-12
 
 * Factors can now be functions
