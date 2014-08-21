@@ -10,20 +10,21 @@ describe('OTP Profile Score', function() {
       assert(scorer.rates !== undefined);
     });
 
-    it('should override default rates and factors with passed in values', function() {
-      var scorer = new Scorer({
-        factors: {
-          bikeParking: 2
-        },
-        rates: {
-          bikeSpeed: 5
-        }
-      });
+    it('should override default rates and factors with passed in values',
+      function() {
+        var scorer = new Scorer({
+          factors: {
+            bikeParking: 2
+          },
+          rates: {
+            bikeSpeed: 5
+          }
+        });
 
-      assert(scorer.factors.bikeParking === 2);
-      assert(scorer.rates.bikeSpeed === 5);
-      assert(scorer.factors.calories === -0.01);
-    });
+        assert(scorer.factors.bikeParking === 2);
+        assert(scorer.rates.bikeSpeed === 5);
+        assert(scorer.factors.calories === -0.01);
+      });
   });
 
   describe('processOption', function() {

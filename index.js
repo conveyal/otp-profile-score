@@ -176,7 +176,8 @@ ProfileScore.prototype.tally = function(o) {
     case 'bicycle':
       o.bikeDistance = accessDistance;
       o.time = (o.bikeDistance / this.rates.bikeSpeed) / 60; // seconds to minutes
-      o.bikeCalories = caloriesBurned(CYCLING_MET, this.rates.weight, o.time / 60);
+      o.bikeCalories = caloriesBurned(CYCLING_MET, this.rates.weight, o.time /
+        60);
       break;
     case 'walk':
       o.walkDistance += accessDistance;
