@@ -21,7 +21,7 @@ var WALKING_MET = 3.8;
 
 var DEFAULT_TIME_FACTORS = {
   bikeParking: 1,
-  calories: -3,
+  calories: -0.01,
   carParking: 5,
   co2: 0.5,
   cost: 5,
@@ -102,21 +102,22 @@ ProfileScore.prototype.processOption = function(o) {
  */
 
 ProfileScore.prototype.score = function(o) {
+  var factors = this.factors;
   var score = o.time;
   var totalCalories = 0;
 
   o.modes.forEach(function(mode) {
-    switch (o.mode) {
+    switch (mode) {
       case 'car':
         // Add time for parking
-        score += af(1, this.factors.carParking);
+        score += af(1, factors.carParking);
 
         // Add time for CO2 emissions
-        score += af(o.emissions, this.factors.co2);
+        score += af(o.emissions, factors.co2);
         break;
       case 'bicycle':
         // Add time for locking your bike
-        score += af(1, this.factors.bikeParking);
+        score += af(1, factors.bikeParking);
         totalCalories += o.bikeCalories;
         break;
       case 'walk':
@@ -159,10 +160,13 @@ ProfileScore.prototype.tally = function(o) {
   o.walkDistance = 0;
 
   // Tally access
-  o.modes.push(o.access[0].mode.toLowerCase());
-  switch (o.access[0].mode.toLowerCase()) {
+  var access = o.access[0];
+  var accessDistance = walkStepsDistance(access);
+  var accessMode = access.mode.toLowerCase();
+  o.modes.push(accessMode);
+  switch (accessMode) {
     case 'car':
-      o.driveDistance = walkStepsDistance(o.access[0]);
+      o.driveDistance = accessDistance;
 
       o.carCost = this.rates.mileageRate * (o.driveDistance * METERS_TO_MILES) +
         this.rates.carParkingCost;
@@ -170,17 +174,25 @@ ProfileScore.prototype.tally = function(o) {
       o.emissions = o.driveDistance / this.rates.mpg * CO2_PER_GALLON;
       break;
     case 'bicycle':
-      o.bikeDistance = walkStepsDistance(o.access[0]);
-      o.bikeCalories = caloriesBurned(CYCLING_MET, this.rates.weight, (o.bikeDistance /
-        this.rates.bikeSpeed) * SECONDS_TO_HOURS) || 0;
+      o.bikeDistance = accessDistance;
+      o.time = (o.bikeDistance / this.rates.bikeSpeed) / 60; // seconds to minutes
+      o.bikeCalories = caloriesBurned(CYCLING_MET, this.rates.weight, o.time / 60);
       break;
     case 'walk':
-      o.walkDistance += walkStepsDistance(o.access[0]);
+      o.walkDistance += accessDistance;
+      o.time = (o.walkDistance / this.rates.walkSpeed) / 60; // seconds to minutes
       break;
+  }
+
+  // Tally egress
+  if (o.egress && o.egress.length > 0) {
+    if (o.modes.indexOf('walk') === -1) o.modes.push('walk');
+    o.walkDistance += walkStepsDistance(o.egress[0]);
   }
 
   // Tally transit
   if (o.transit && o.transit.length > 0) {
+    o.time = 0;
     o.transitCost = 0;
     o.trips = Infinity;
 
@@ -191,28 +203,25 @@ ProfileScore.prototype.tally = function(o) {
       var trips = segment.segmentPatterns[0].nTrips;
       if (trips < o.trips) o.trips = trips;
 
+      // Add wait time & transit time
+      o.time += (segment.waitStats.avg + segment.rideStats.avg) / 60;
+
+      // Increment the total walk distance
       o.walkDistance += segment.walkDistance;
     });
 
-    if (o.fares && o.fares.length) {
-      o.fares.forEach(function(fare) {
-        o.transitCost += fare.peak;
-      });
-    }
+    o.fares.forEach(function(fare) {
+      o.transitCost += fare.peak;
+    });
 
     o.cost += o.transitCost;
-  }
-
-  // Tally egress
-  if (o.egress && o.egress.length > 0) {
-    if (o.modes.indexOf('walk') === -1) o.modes.push('walk');
-    o.walkDistance += walkStepsDistance(o.egress[0]);
+    o.time += (o.walkDistance / this.rates.walkSpeed) / 60;
   }
 
   // Set the walking calories burned
   if (o.modes.indexOf('walk') !== -1)
     o.walkCalories = caloriesBurned(WALKING_MET, this.rates.weight, (o.walkDistance /
-      this.rates.walkSpeed) * SECONDS_TO_HOURS) || 0;
+      this.rates.walkSpeed) * SECONDS_TO_HOURS);
 
   // Total calories
   o.calories = o.bikeCalories + o.walkCalories;
@@ -225,7 +234,6 @@ ProfileScore.prototype.tally = function(o) {
  */
 
 function walkStepsDistance(o) {
-  if (!o.walkSteps || o.walkSteps.length < 1) return 0;
   return o.walkSteps.reduce(function(distance, step) {
     return distance + step.distance;
   }, 0);

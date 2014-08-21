@@ -3,7 +3,12 @@
   "version": "0.3.0",
   "description": "Score OTP profiles",
   "dependencies": {
-      "component-clone": "*"
+    "component-clone": "0"
+  },
+  "devDependencies": {
+    "component": "0",
+    "istanbul": "0",
+    "mocha": "1"
   },
   "main": "index.js",
   "scripts": {

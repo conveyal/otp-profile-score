@@ -1,0 +1,3072 @@
+{
+  "options": [{
+    "access": [{
+      "mode": "WALK",
+      "time": 1653,
+      "geometry": {
+        "points": "krmlFbyduM{CA}A?wA?GTIVOp@ERUx@Yt@GLINS^KVC@MDKHEHSNUHoC?m@ZU?cDAI?O?Q?Q?cB?K?K?u@?{@?U?O?cC?k@?yAAM?Q?k@?G?mA?O?O?K?yA?O?a@?e@?kA?sCAmC?qB?G?U?}E?c@AU?W?{B?W?eA?kC?I?}A?Y?S?yBAsE?{@?k@?w@?uFAqD?m@?mA?Q?_@?s@?UROLMHODUBw@TeAZ@V?DEzCKhHAv@ALAx@A^CnA?~CAVe@hAGH]ZIFE@Q?q@??nA",
+        "length": 106
+      },
+      "walkSteps": [{
+        "distance": 188.76801600239074,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 156.21900862416626,
+        "relativeDirection": "LEFT",
+        "streetName": "Massachusetts Avenue Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03456800000001,
+        "lat": 38.906558000000004,
+        "elevation": []
+      }, {
+        "distance": 24.399549490294707,
+        "relativeDirection": "CIRCLE_COUNTERCLOCKWISE",
+        "streetName": "Scott Circle Northwest",
+        "absoluteDirection": "NORTH",
+        "exit": "1",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03613580000001,
+        "lat": 38.9072411,
+        "elevation": []
+      }, {
+        "distance": 134.69945348917736,
+        "relativeDirection": "CONTINUE",
+        "streetName": "link",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.036277,
+        "lat": 38.907423,
+        "elevation": []
+      }, {
+        "distance": 2023.7580475906257,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "16th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0365415,
+        "lat": 38.9085861,
+        "elevation": []
+      }, {
+        "distance": 129.93642015844776,
+        "relativeDirection": "SLIGHTLY_LEFT",
+        "streetName": "Mount Pleasant Street Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0364809,
+        "lat": 38.9267861,
+        "elevation": []
+      }, {
+        "distance": 506.58564097455803,
+        "relativeDirection": "LEFT",
+        "streetName": "Hobart Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.037006,
+        "lat": 38.927866,
+        "elevation": []
+      }, {
+        "distance": 34.13697541904976,
+        "relativeDirection": "LEFT",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.042158,
+        "lat": 38.928817,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 855,
+      "geometry": {
+        "points": "krmlFbyduM{CA}A?wA?GTIVOp@ERUx@Yt@GLINS^KVC@MDKHEHSNUHoC?m@ZU?cDAI?O?Q?Q?cB?K?K?u@?{@?U?O?cC?k@?yAAM?Q?k@?G?mA?O?O?K?yA?O?]?C?e@?kA?sCAmC?qB?G?U?}E?c@AU?W?{B?W?eA?kC?I?}A?Y?S?yBAsE?{@?k@?w@?uFAqD?e@?G?mA?Q?_@?s@?iA??VDXUBw@TBp@YjPGtCErEs@jBoAdAQbA[n@i@@QO@CBK@I@K@O?O@O?W",
+        "length": 105
+      },
+      "walkSteps": [{
+        "distance": 188.76801600239074,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 156.21900862416626,
+        "relativeDirection": "LEFT",
+        "streetName": "Massachusetts Avenue Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03456800000001,
+        "lat": 38.906558000000004,
+        "elevation": []
+      }, {
+        "distance": 24.399549490294707,
+        "relativeDirection": "CIRCLE_COUNTERCLOCKWISE",
+        "streetName": "Scott Circle Northwest",
+        "absoluteDirection": "NORTH",
+        "exit": "1",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03613580000001,
+        "lat": 38.9072411,
+        "elevation": []
+      }, {
+        "distance": 134.69945348917736,
+        "relativeDirection": "CONTINUE",
+        "streetName": "link",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.036277,
+        "lat": 38.907423,
+        "elevation": []
+      }, {
+        "distance": 2064.8891300709333,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "16th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0365415,
+        "lat": 38.9085861,
+        "elevation": []
+      }, {
+        "distance": 22.053241732708244,
+        "relativeDirection": "LEFT",
+        "streetName": "Harvard Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0364813,
+        "lat": 38.927156000000004,
+        "elevation": []
+      }, {
+        "distance": 45.06940871179298,
+        "relativeDirection": "RIGHT",
+        "streetName": "Mount Pleasant Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03673,
+        "lat": 38.9271201,
+        "elevation": []
+      }, {
+        "distance": 619.4396671756584,
+        "relativeDirection": "LEFT",
+        "streetName": "alley",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.03686610000001,
+        "lat": 38.9275108,
+        "elevation": []
+      }, {
+        "distance": 48.95395323706113,
+        "relativeDirection": "RIGHT",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.043109,
+        "lat": 38.92888,
+        "elevation": []
+      }]
+    }, {
+      "mode": "CAR",
+      "time": 690,
+      "geometry": {
+        "points": "krmlFbyduM{CA?TAxD?dD?R?hKU?sA?iA?{@?y@?S?qB?U?GV{AdGkBvHENGRS?uA?O?Q?_AAaA?eC?M?M?i@?Y@[A[?I?M?yB?K?O?eC?sC?sC?sCAoC?aB?g@?gDA]@yCDwCCQBKBgDv@SFoIjBmAV]FEBE@E@CBEBIFCBCDCBINKREP?@CLEnAa@@oAjDABCBEDIDEBKDSDG?e@@S@U?]CQIKCMCI?GAK?MAMAWEKAOCMEMCOGKEQIOGOG_@YgB{BoBeCQSUMYKQ\\IJEFCFA@OZ[z@ILMJMFE@GBgANODI@IDMDWHOHMHSJ]VOJODKAECGMROXWRQd@_@DGJMDGFMDIFODOBK?E@CBK@I@K@O?O@O?W",
+        "length": 157
+      },
+      "walkSteps": [{
+        "distance": 87.35804681226912,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 340.99148810521126,
+        "relativeDirection": "LEFT",
+        "streetName": "M Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.034569,
+        "lat": 38.905646000000004,
+        "elevation": []
+      }, {
+        "distance": 252.74878885597946,
+        "relativeDirection": "RIGHT",
+        "streetName": "17th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0385097,
+        "lat": 38.905652,
+        "elevation": []
+      }, {
+        "distance": 300.77344737068654,
+        "relativeDirection": "LEFT",
+        "streetName": "Massachusetts Avenue Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03850320000001,
+        "lat": 38.907925000000006,
+        "elevation": []
+      }, {
+        "distance": 1526.710226857964,
+        "relativeDirection": "RIGHT",
+        "streetName": "18th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.04167600000001,
+        "lat": 38.90903,
+        "elevation": []
+      }, {
+        "distance": 706.9180662283238,
+        "relativeDirection": "CONTINUE",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.04268400000001,
+        "lat": 38.922661000000005,
+        "elevation": []
+      }, {
+        "distance": 78.87206615883203,
+        "relativeDirection": "LEFT",
+        "streetName": "Harvard Street Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.04263830000001,
+        "lat": 38.9275833,
+        "elevation": []
+      }, {
+        "distance": 188.94785274748614,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0433706,
+        "lat": 38.9280015,
+        "elevation": []
+      }, {
+        "distance": 18.00787079701316,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "link",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.0441795,
+        "lat": 38.929556500000004,
+        "elevation": []
+      }, {
+        "distance": 173.9330260890793,
+        "relativeDirection": "RIGHT",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "SOUTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0440737,
+        "lat": 38.9296851,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 690,
+      "avg": 1066,
+      "max": 1653,
+      "num": 1
+    },
+    "summary": "Non-transit options",
+    "fares": []
+  }, {
+    "transit": [{
+      "from": "C2648",
+      "to": "C8171",
+      "walkTime": 267,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 0,
+        "avg": 142,
+        "max": 360,
+        "num": 7140
+      },
+      "mode": "SUBWAY",
+      "fromName": "MT VERNON SQ/7TH ST-CONVENTION CENTER",
+      "toName": "COLUMBIA HEIGHTS METRO STATION",
+      "rideStats": {
+        "min": 300,
+        "avg": 300,
+        "max": 300,
+        "num": 28
+      },
+      "routes": [{
+        "id": "DC:GREEN",
+        "shortName": "Green",
+        "longName": "Metrorail Green Line",
+        "mode": "SUBWAY",
+        "color": "009d57"
+      }, {
+        "id": "DC:YELLOW",
+        "shortName": "Yellow",
+        "longName": "Metrorail Yellow Line",
+        "mode": "SUBWAY",
+        "color": "fde310"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:GREEN:04",
+        "fromIndex": 11,
+        "toIndex": 14,
+        "nTrips": 22
+      }, {
+        "patternId": "DC:YELLOW:09",
+        "fromIndex": 11,
+        "toIndex": 14,
+        "nTrips": 6
+      }]
+    }],
+    "access": [{
+      "mode": "WALK",
+      "time": 629,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDcAg@OMYSEOCKAKCOEKEIECOEIEGECEEGEGMSGGMGIQEGCOCUB}H?sH?qE?mE?C?eE?EAuD?S?o@@aG?G?aA?[?A",
+        "length": 42
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 169.38553397137267,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 118.71623825306904,
+        "relativeDirection": "LEFT",
+        "streetName": "Vermont Avenue Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03269200000001,
+        "lat": 38.9043976,
+        "elevation": []
+      }, {
+        "distance": 24.406941438711712,
+        "relativeDirection": "CONTINUE",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0318866,
+        "lat": 38.905190600000005,
+        "elevation": []
+      }, {
+        "distance": 26.71705735816246,
+        "relativeDirection": "CIRCLE_COUNTERCLOCKWISE",
+        "streetName": "Thomas Circle Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "exit": "1",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0317172,
+        "lat": 38.905361500000005,
+        "elevation": []
+      }, {
+        "distance": 836.5482259281686,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "M Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0315317,
+        "lat": 38.905548200000005,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 267,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDcAg@OMYSEOCKAKCOEKEIECOEIEGECEEGEGMSGGMGIQEGCOCUB}H?sH?qE?mE?C?eE?EAuD?S?o@@aG?G?aA?[?A",
+        "length": 42
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 169.38553397137267,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 118.71623825306904,
+        "relativeDirection": "LEFT",
+        "streetName": "Vermont Avenue Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03269200000001,
+        "lat": 38.9043976,
+        "elevation": []
+      }, {
+        "distance": 24.406941438711712,
+        "relativeDirection": "CONTINUE",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0318866,
+        "lat": 38.905190600000005,
+        "elevation": []
+      }, {
+        "distance": 26.71705735816246,
+        "relativeDirection": "CIRCLE_COUNTERCLOCKWISE",
+        "streetName": "Thomas Circle Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "exit": "1",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0317172,
+        "lat": 38.905361500000005,
+        "elevation": []
+      }, {
+        "distance": 836.5482259281686,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "M Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0315317,
+        "lat": 38.905548200000005,
+        "elevation": []
+      }]
+    }],
+    "egress": [{
+      "mode": "WALK",
+      "time": 453,
+      "geometry": {
+        "points": "qgrlFxkduMAFG^A^?PTzIDpB@P?L?B?HEvCAv@Ah@EhBAZAZ?HExCClBAXAr@?\\?H?rA?|G?bA?pA?R?nA",
+        "length": 30
+      },
+      "walkSteps": [{
+        "distance": 876.0416659710269,
+        "relativeDirection": "DEPART",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.032448469494,
+        "lat": 38.92873024415887,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 1287,
+      "avg": 1610,
+      "max": 2009,
+      "num": 1
+    },
+    "summary": "routes Green/Yellow",
+    "fares": [{
+      "type": "METRO_RAIL",
+      "low": 1.7,
+      "peak": 2.1,
+      "senior": 1.05,
+      "transferReduction": false
+    }]
+  }, {
+    "transit": [{
+      "from": "C2648",
+      "to": "C8171",
+      "walkTime": 267,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 0,
+        "avg": 142,
+        "max": 360,
+        "num": 7140
+      },
+      "mode": "SUBWAY",
+      "fromName": "MT VERNON SQ/7TH ST-CONVENTION CENTER",
+      "toName": "COLUMBIA HEIGHTS METRO STATION",
+      "rideStats": {
+        "min": 300,
+        "avg": 300,
+        "max": 300,
+        "num": 28
+      },
+      "routes": [{
+        "id": "DC:GREEN",
+        "shortName": "Green",
+        "longName": "Metrorail Green Line",
+        "mode": "SUBWAY",
+        "color": "009d57"
+      }, {
+        "id": "DC:YELLOW",
+        "shortName": "Yellow",
+        "longName": "Metrorail Yellow Line",
+        "mode": "SUBWAY",
+        "color": "fde310"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:GREEN:04",
+        "fromIndex": 11,
+        "toIndex": 14,
+        "nTrips": 22
+      }, {
+        "patternId": "DC:YELLOW:09",
+        "fromIndex": 11,
+        "toIndex": 14,
+        "nTrips": 6
+      }]
+    }, {
+      "from": "C7967",
+      "to": "C1890",
+      "walkTime": 73,
+      "walkDistance": 147,
+      "waitStats": {
+        "min": 5,
+        "avg": 134,
+        "max": 533,
+        "num": 27
+      },
+      "mode": "BUS",
+      "fromName": "14TH ST NW & COLUMBIA RD NW",
+      "toName": "16TH ST NW & COLUMBIA RD NW",
+      "rideStats": {
+        "min": 66,
+        "avg": 140,
+        "max": 168,
+        "num": 33
+      },
+      "routes": [{
+        "id": "DC:194",
+        "shortName": "H1",
+        "mode": "BUS"
+      }, {
+        "id": "DC:171",
+        "shortName": "DC98",
+        "longName": "DC Circulator: Woodley Park - Adams Morgan-McPherson Square Metro",
+        "mode": "BUS"
+      }, {
+        "id": "DC:200",
+        "shortName": "H4",
+        "mode": "BUS"
+      }, {
+        "id": "DC:199",
+        "shortName": "H3",
+        "mode": "BUS"
+      }, {
+        "id": "DC:198",
+        "shortName": "H2",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:171:04",
+        "fromIndex": 3,
+        "toIndex": 4,
+        "nTrips": 10
+      }, {
+        "patternId": "DC:194:02",
+        "fromIndex": 13,
+        "toIndex": 14,
+        "nTrips": 7
+      }, {
+        "patternId": "DC:199:02",
+        "fromIndex": 13,
+        "toIndex": 14,
+        "nTrips": 6
+      }, {
+        "patternId": "DC:200:05",
+        "fromIndex": 17,
+        "toIndex": 18,
+        "nTrips": 6
+      }, {
+        "patternId": "DC:198:02",
+        "fromIndex": 17,
+        "toIndex": 18,
+        "nTrips": 4
+      }]
+    }],
+    "access": [{
+      "mode": "WALK",
+      "time": 629,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDcAg@OMYSEOCKAKCOEKEIECOEIEGECEEGEGMSGGMGIQEGCOCUB}H?sH?qE?mE?C?eE?EAuD?S?o@@aG?G?aA?[?A",
+        "length": 42
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 169.38553397137267,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 118.71623825306904,
+        "relativeDirection": "LEFT",
+        "streetName": "Vermont Avenue Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03269200000001,
+        "lat": 38.9043976,
+        "elevation": []
+      }, {
+        "distance": 24.406941438711712,
+        "relativeDirection": "CONTINUE",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0318866,
+        "lat": 38.905190600000005,
+        "elevation": []
+      }, {
+        "distance": 26.71705735816246,
+        "relativeDirection": "CIRCLE_COUNTERCLOCKWISE",
+        "streetName": "Thomas Circle Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "exit": "1",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0317172,
+        "lat": 38.905361500000005,
+        "elevation": []
+      }, {
+        "distance": 836.5482259281686,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "M Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0315317,
+        "lat": 38.905548200000005,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 267,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDcAg@OMYSEOCKAKCOEKEIECOEIEGECEEGEGMSGGMGIQEGCOCUB}H?sH?qE?mE?C?eE?EAuD?S?o@@aG?G?aA?[?A",
+        "length": 42
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 169.38553397137267,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 118.71623825306904,
+        "relativeDirection": "LEFT",
+        "streetName": "Vermont Avenue Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03269200000001,
+        "lat": 38.9043976,
+        "elevation": []
+      }, {
+        "distance": 24.406941438711712,
+        "relativeDirection": "CONTINUE",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0318866,
+        "lat": 38.905190600000005,
+        "elevation": []
+      }, {
+        "distance": 26.71705735816246,
+        "relativeDirection": "CIRCLE_COUNTERCLOCKWISE",
+        "streetName": "Thomas Circle Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "exit": "1",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0317172,
+        "lat": 38.905361500000005,
+        "elevation": []
+      }, {
+        "distance": 836.5482259281686,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "M Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0315317,
+        "lat": 38.905548200000005,
+        "elevation": []
+      }]
+    }],
+    "egress": [{
+      "mode": "WALK",
+      "time": 404,
+      "geometry": {
+        "points": "m{qlF|aeuMt@bBs@?UROLMHODUBw@TeAZ@V?DEzCKhHAv@ALAx@A^CnA?~CAVe@hAGH]ZIFE@Q?q@??nA",
+        "length": 29
+      },
+      "walkSteps": [{
+        "distance": 52.57624162909118,
+        "relativeDirection": "DEPART",
+        "streetName": "Columbia Road Northwest",
+        "absoluteDirection": "SOUTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0359874649859,
+        "lat": 38.92679495174262,
+        "elevation": []
+      }, {
+        "distance": 29.422956237551784,
+        "relativeDirection": "HARD_RIGHT",
+        "streetName": "16th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0364833,
+        "lat": 38.9265215,
+        "elevation": []
+      }, {
+        "distance": 129.93642015844776,
+        "relativeDirection": "SLIGHTLY_LEFT",
+        "streetName": "Mount Pleasant Street Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0364809,
+        "lat": 38.9267861,
+        "elevation": []
+      }, {
+        "distance": 506.58564097455803,
+        "relativeDirection": "LEFT",
+        "streetName": "Hobart Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.037006,
+        "lat": 38.927866,
+        "elevation": []
+      }, {
+        "distance": 34.13697541904976,
+        "relativeDirection": "LEFT",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.042158,
+        "lat": 38.928817,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 1382,
+      "avg": 1908,
+      "max": 2734,
+      "num": 1
+    },
+    "summary": "routes Green/Yellow, H1/DC98/H4/H3/H2 via COLUMBIA HEIGHTS METRO STATION",
+    "fares": [{
+      "type": "METRO_RAIL",
+      "low": 1.7,
+      "peak": 2.1,
+      "senior": 1.05,
+      "transferReduction": false
+    }, {
+      "type": "METRO_BUS_LOCAL",
+      "low": 1.1,
+      "peak": 1.1,
+      "senior": 1.1,
+      "transferReduction": true
+    }]
+  }, {
+    "transit": [{
+      "from": "C13817",
+      "to": "C7217",
+      "walkTime": 56,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 0,
+        "avg": 195,
+        "max": 720,
+        "num": 7068
+      },
+      "mode": "BUS",
+      "fromName": "16TH ST NW & M ST NW",
+      "toName": "CONNECTICUT (MAIN) AV NW & K ST NW",
+      "rideStats": {
+        "min": 114,
+        "avg": 127,
+        "max": 132,
+        "num": 19
+      },
+      "routes": [{
+        "id": "DC:254",
+        "shortName": "S1",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:254:01",
+        "fromIndex": 28,
+        "toIndex": 31,
+        "nTrips": 12
+      }, {
+        "patternId": "DC:254:03",
+        "fromIndex": 36,
+        "toIndex": 39,
+        "nTrips": 7
+      }]
+    }, {
+      "from": "C8064",
+      "to": "C7906",
+      "walkTime": 60,
+      "walkDistance": 120,
+      "waitStats": {
+        "min": 36,
+        "avg": 407,
+        "max": 936,
+        "num": 16
+      },
+      "mode": "BUS",
+      "fromName": "CONNECTICUT AV NW & L ST NW",
+      "toName": "CALVERT ST NW & CLIFFBOURNE PL NW",
+      "rideStats": {
+        "min": 660,
+        "avg": 711,
+        "max": 750,
+        "num": 7
+      },
+      "routes": [{
+        "id": "DC:221",
+        "shortName": "L2",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:221:03",
+        "fromIndex": 1,
+        "toIndex": 10,
+        "nTrips": 7
+      }]
+    }],
+    "access": [{
+      "mode": "WALK",
+      "time": 136,
+      "geometry": {
+        "points": "krmlFbyduMb@??T?pJoB?",
+        "length": 5
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 170.17492013504133,
+        "relativeDirection": "RIGHT",
+        "streetName": "service road",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 62.24727850837238,
+        "relativeDirection": "RIGHT",
+        "streetName": "16th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03653960000001,
+        "lat": 38.9046855,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 56,
+      "geometry": {
+        "points": "krmlFbyduMb@??T?pJoB?",
+        "length": 5
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 170.17492013504133,
+        "relativeDirection": "RIGHT",
+        "streetName": "service road",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 62.24727850837238,
+        "relativeDirection": "RIGHT",
+        "streetName": "16th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03653960000001,
+        "lat": 38.9046855,
+        "elevation": []
+      }]
+    }],
+    "egress": [{
+      "mode": "WALK",
+      "time": 607,
+      "geometry": {
+        "points": "eeqlFlxfuM?AA_DAm@a@@oAjDABCBEDIDEBKDSDG?e@@S@U?]CQIKCMCI?GAK?MAMAWEKAOCMEMCOGKEQIOGOG_@YgB{BoBeCQSUMYKQ\\IJEFCFA@OZ[z@ILMJMFE@GBgANODI@IDMDWHOHMHSJ]VOJODKAECGMROXWRQd@_@DGJMDGFMDIFODOBK?E@CBK@I@K@O?O@O?W",
+        "length": 90
+      },
+      "walkSteps": [{
+        "distance": 89.6062624980616,
+        "relativeDirection": "DEPART",
+        "streetName": "Calvert Street Northwest",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0447019894726,
+        "lat": 38.92323899369861,
+        "elevation": []
+      }, {
+        "distance": 19.34786347392475,
+        "relativeDirection": "LEFT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0436663,
+        "lat": 38.9232512,
+        "elevation": []
+      }, {
+        "distance": 566.9303256266282,
+        "relativeDirection": "LEFT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": true,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.043677,
+        "lat": 38.923425,
+        "elevation": []
+      }, {
+        "distance": 78.87206615883203,
+        "relativeDirection": "LEFT",
+        "streetName": "Harvard Street Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.04263830000001,
+        "lat": 38.9275833,
+        "elevation": []
+      }, {
+        "distance": 188.94785274748614,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0433706,
+        "lat": 38.9280015,
+        "elevation": []
+      }, {
+        "distance": 18.00787079701316,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "link",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.0441795,
+        "lat": 38.929556500000004,
+        "elevation": []
+      }, {
+        "distance": 173.9330260890793,
+        "relativeDirection": "RIGHT",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "SOUTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0440737,
+        "lat": 38.9296851,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 1589,
+      "avg": 2259,
+      "max": 3397,
+      "num": 1
+    },
+    "summary": "routes S1, L2 via CONNECTICUT (MAIN) AV NW & K ST NW",
+    "fares": [{
+      "type": "METRO_BUS_LOCAL",
+      "low": 1.6,
+      "peak": 1.6,
+      "senior": 1.6,
+      "transferReduction": false
+    }]
+  }, {
+    "transit": [{
+      "from": "C15244",
+      "to": "C8237",
+      "walkTime": 158,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 0,
+        "avg": 91,
+        "max": 240,
+        "num": 7080
+      },
+      "mode": "SUBWAY",
+      "fromName": "FARRAGUT METRO STATION N",
+      "toName": "DUPONT METRO STATION CL",
+      "rideStats": {
+        "min": 180,
+        "avg": 180,
+        "max": 180,
+        "num": 38
+      },
+      "routes": [{
+        "id": "DC:RED",
+        "shortName": "Red",
+        "longName": "Metrorail Red Line",
+        "mode": "SUBWAY",
+        "color": "e94333"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:RED:10",
+        "fromIndex": 13,
+        "toIndex": 14,
+        "nTrips": 19
+      }, {
+        "patternId": "DC:RED:16",
+        "fromIndex": 10,
+        "toIndex": 11,
+        "nTrips": 17
+      }, {
+        "patternId": "DC:RED:15",
+        "fromIndex": 13,
+        "toIndex": 14,
+        "nTrips": 2
+      }]
+    }, {
+      "from": "C6715",
+      "to": "C7951",
+      "walkTime": 18,
+      "walkDistance": 37,
+      "waitStats": {
+        "min": 36,
+        "avg": 404,
+        "max": 816,
+        "num": 35
+      },
+      "mode": "BUS",
+      "fromName": "CONNECTICUT AV NW & Q ST NW",
+      "toName": "18TH ST NW & COLUMBIA RD NW",
+      "rideStats": {
+        "min": 354,
+        "avg": 387,
+        "max": 414,
+        "num": 9
+      },
+      "routes": [{
+        "id": "DC:81",
+        "shortName": "42",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:81:01",
+        "fromIndex": 13,
+        "toIndex": 20,
+        "nTrips": 9
+      }]
+    }, {
+      "from": "C7951",
+      "to": "C7906",
+      "walkTime": 0,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 18,
+        "avg": 180,
+        "max": 498,
+        "num": 8
+      },
+      "mode": "BUS",
+      "fromName": "18TH ST NW & COLUMBIA RD NW",
+      "toName": "CALVERT ST NW & CLIFFBOURNE PL NW",
+      "rideStats": {
+        "min": 54,
+        "avg": 57,
+        "max": 60,
+        "num": 8
+      },
+      "routes": [{
+        "id": "DC:221",
+        "shortName": "L2",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:221:03",
+        "fromIndex": 9,
+        "toIndex": 10,
+        "nTrips": 8
+      }]
+    }],
+    "access": [{
+      "mode": "WALK",
+      "time": 337,
+      "geometry": {
+        "points": "krmlFbyduMb@?|D??T?pJAjK@zGZQhAg@",
+        "length": 9
+      },
+      "walkSteps": [{
+        "distance": 124.91453010999874,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 463.3384410527875,
+        "relativeDirection": "RIGHT",
+        "streetName": "L Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.034577,
+        "lat": 38.903737,
+        "elevation": []
+      }, {
+        "distance": 62.828653065652,
+        "relativeDirection": "HARD_LEFT",
+        "streetName": "Connecticut Avenue Northwest",
+        "absoluteDirection": "SOUTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03993150000001,
+        "lat": 38.903739300000005,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 158,
+      "geometry": {
+        "points": "krmlFbyduMb@?|D?nE@H??R?J?fB?r@?~C?N?Z?Z?dA?~@?fF?zBCR?@IJ]\\gAd@",
+        "length": 22
+      },
+      "walkSteps": [{
+        "distance": 246.50672968744715,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 432.10166710533406,
+        "relativeDirection": "RIGHT",
+        "streetName": "service road",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.03458040000001,
+        "lat": 38.9026435,
+        "elevation": []
+      }, {
+        "distance": 43.11860899313779,
+        "relativeDirection": "CONTINUE",
+        "streetName": "Connecticut Avenue Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0394527,
+        "lat": 38.902862600000006,
+        "elevation": []
+      }]
+    }],
+    "egress": [{
+      "mode": "WALK",
+      "time": 607,
+      "geometry": {
+        "points": "eeqlFlxfuM?AA_DAm@a@@oAjDABCBEDIDEBKDSDG?e@@S@U?]CQIKCMCI?GAK?MAMAWEKAOCMEMCOGKEQIOGOG_@YgB{BoBeCQSUMYKQ\\IJEFCFA@OZ[z@ILMJMFE@GBgANODI@IDMDWHOHMHSJ]VOJODKAECGMROXWRQd@_@DGJMDGFMDIFODOBK?E@CBK@I@K@O?O@O?W",
+        "length": 90
+      },
+      "walkSteps": [{
+        "distance": 89.6062624980616,
+        "relativeDirection": "DEPART",
+        "streetName": "Calvert Street Northwest",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0447019894726,
+        "lat": 38.92323899369861,
+        "elevation": []
+      }, {
+        "distance": 19.34786347392475,
+        "relativeDirection": "LEFT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0436663,
+        "lat": 38.9232512,
+        "elevation": []
+      }, {
+        "distance": 566.9303256266282,
+        "relativeDirection": "LEFT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": true,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.043677,
+        "lat": 38.923425,
+        "elevation": []
+      }, {
+        "distance": 78.87206615883203,
+        "relativeDirection": "LEFT",
+        "streetName": "Harvard Street Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.04263830000001,
+        "lat": 38.9275833,
+        "elevation": []
+      }, {
+        "distance": 188.94785274748614,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0433706,
+        "lat": 38.9280015,
+        "elevation": []
+      }, {
+        "distance": 18.00787079701316,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "link",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.0441795,
+        "lat": 38.929556500000004,
+        "elevation": []
+      }, {
+        "distance": 173.9330260890793,
+        "relativeDirection": "RIGHT",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "SOUTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0440737,
+        "lat": 38.9296851,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 1583,
+      "avg": 2329,
+      "max": 3328,
+      "num": 1
+    },
+    "summary": "routes Red, 42, L2 via DUPONT METRO STATION CL, 18TH ST NW & COLUMBIA RD NW",
+    "fares": [{
+      "type": "METRO_RAIL",
+      "low": 1.7,
+      "peak": 2.1,
+      "senior": 1.05,
+      "transferReduction": false
+    }, {
+      "type": "METRO_BUS_LOCAL",
+      "low": 1.1,
+      "peak": 1.1,
+      "senior": 1.1,
+      "transferReduction": true
+    }]
+  }, {
+    "transit": [{
+      "from": "C2648",
+      "to": "C8171",
+      "walkTime": 267,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 0,
+        "avg": 142,
+        "max": 360,
+        "num": 7140
+      },
+      "mode": "SUBWAY",
+      "fromName": "MT VERNON SQ/7TH ST-CONVENTION CENTER",
+      "toName": "COLUMBIA HEIGHTS METRO STATION",
+      "rideStats": {
+        "min": 300,
+        "avg": 300,
+        "max": 300,
+        "num": 28
+      },
+      "routes": [{
+        "id": "DC:GREEN",
+        "shortName": "Green",
+        "longName": "Metrorail Green Line",
+        "mode": "SUBWAY",
+        "color": "009d57"
+      }, {
+        "id": "DC:YELLOW",
+        "shortName": "Yellow",
+        "longName": "Metrorail Yellow Line",
+        "mode": "SUBWAY",
+        "color": "fde310"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:GREEN:04",
+        "fromIndex": 11,
+        "toIndex": 14,
+        "nTrips": 22
+      }, {
+        "patternId": "DC:YELLOW:09",
+        "fromIndex": 11,
+        "toIndex": 14,
+        "nTrips": 6
+      }]
+    }, {
+      "from": "C7967",
+      "to": "C6901",
+      "walkTime": 73,
+      "walkDistance": 147,
+      "waitStats": {
+        "min": 53,
+        "avg": 733,
+        "max": 1619,
+        "num": 23
+      },
+      "mode": "BUS",
+      "fromName": "14TH ST NW & COLUMBIA RD NW",
+      "toName": "ADAMS MILL RD NW & IRVING ST NW",
+      "rideStats": {
+        "min": 246,
+        "avg": 292,
+        "max": 324,
+        "num": 4
+      },
+      "routes": [{
+        "id": "DC:198",
+        "shortName": "H2",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:198:02",
+        "fromIndex": 17,
+        "toIndex": 22,
+        "nTrips": 4
+      }]
+    }],
+    "access": [{
+      "mode": "WALK",
+      "time": 629,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDcAg@OMYSEOCKAKCOEKEIECOEIEGECEEGEGMSGGMGIQEGCOCUB}H?sH?qE?mE?C?eE?EAuD?S?o@@aG?G?aA?[?A",
+        "length": 42
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 169.38553397137267,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 118.71623825306904,
+        "relativeDirection": "LEFT",
+        "streetName": "Vermont Avenue Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03269200000001,
+        "lat": 38.9043976,
+        "elevation": []
+      }, {
+        "distance": 24.406941438711712,
+        "relativeDirection": "CONTINUE",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0318866,
+        "lat": 38.905190600000005,
+        "elevation": []
+      }, {
+        "distance": 26.71705735816246,
+        "relativeDirection": "CIRCLE_COUNTERCLOCKWISE",
+        "streetName": "Thomas Circle Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "exit": "1",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0317172,
+        "lat": 38.905361500000005,
+        "elevation": []
+      }, {
+        "distance": 836.5482259281686,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "M Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0315317,
+        "lat": 38.905548200000005,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 267,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDcAg@OMYSEOCKAKCOEKEIECOEIEGECEEGEGMSGGMGIQEGCOCUB}H?sH?qE?mE?C?eE?EAuD?S?o@@aG?G?aA?[?A",
+        "length": 42
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 169.38553397137267,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 118.71623825306904,
+        "relativeDirection": "LEFT",
+        "streetName": "Vermont Avenue Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03269200000001,
+        "lat": 38.9043976,
+        "elevation": []
+      }, {
+        "distance": 24.406941438711712,
+        "relativeDirection": "CONTINUE",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0318866,
+        "lat": 38.905190600000005,
+        "elevation": []
+      }, {
+        "distance": 26.71705735816246,
+        "relativeDirection": "CIRCLE_COUNTERCLOCKWISE",
+        "streetName": "Thomas Circle Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "exit": "1",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0317172,
+        "lat": 38.905361500000005,
+        "elevation": []
+      }, {
+        "distance": 836.5482259281686,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "M Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0315317,
+        "lat": 38.905548200000005,
+        "elevation": []
+      }]
+    }],
+    "egress": [{
+      "mode": "WALK",
+      "time": 75,
+      "geometry": {
+        "points": "alrlFfsfuMRQd@_@DGJMDGFMDIFODOBK?E@CBK@I@K@O?O@O?W",
+        "length": 20
+      },
+      "walkSteps": [{
+        "distance": 143.95252646377273,
+        "relativeDirection": "DEPART",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "SOUTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.04387376050583,
+        "lat": 38.929451681906606,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 1281,
+      "avg": 2330,
+      "max": 3647,
+      "num": 1
+    },
+    "summary": "routes Green/Yellow, H2 via COLUMBIA HEIGHTS METRO STATION",
+    "fares": [{
+      "type": "METRO_RAIL",
+      "low": 1.7,
+      "peak": 2.1,
+      "senior": 1.05,
+      "transferReduction": false
+    }, {
+      "type": "METRO_BUS_LOCAL",
+      "low": 1.1,
+      "peak": 1.1,
+      "senior": 1.1,
+      "transferReduction": true
+    }]
+  }, {
+    "transit": [{
+      "from": "C13817",
+      "to": "C15242",
+      "walkTime": 56,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 0,
+        "avg": 94,
+        "max": 426,
+        "num": 7170
+      },
+      "mode": "BUS",
+      "fromName": "16TH ST NW & M ST NW",
+      "toName": "16TH ST NW & K ST NW",
+      "rideStats": {
+        "min": 48,
+        "avg": 74,
+        "max": 102,
+        "num": 69
+      },
+      "routes": [{
+        "id": "DC:257",
+        "shortName": "S9",
+        "mode": "BUS"
+      }, {
+        "id": "DC:256",
+        "shortName": "S4",
+        "mode": "BUS"
+      }, {
+        "id": "DC:255",
+        "shortName": "S2",
+        "mode": "BUS"
+      }, {
+        "id": "DC:254",
+        "shortName": "S1",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:257:01",
+        "fromIndex": 12,
+        "toIndex": 13,
+        "nTrips": 14
+      }, {
+        "patternId": "DC:254:01",
+        "fromIndex": 28,
+        "toIndex": 29,
+        "nTrips": 13
+      }, {
+        "patternId": "DC:255:10",
+        "fromIndex": 37,
+        "toIndex": 38,
+        "nTrips": 11
+      }, {
+        "patternId": "DC:254:03",
+        "fromIndex": 36,
+        "toIndex": 37,
+        "nTrips": 7
+      }, {
+        "patternId": "DC:256:05",
+        "fromIndex": 45,
+        "toIndex": 46,
+        "nTrips": 7
+      }, {
+        "patternId": "DC:255:07",
+        "fromIndex": 9,
+        "toIndex": 10,
+        "nTrips": 6
+      }, {
+        "patternId": "DC:255:09",
+        "fromIndex": 49,
+        "toIndex": 50,
+        "nTrips": 6
+      }, {
+        "patternId": "DC:255:08",
+        "fromIndex": 46,
+        "toIndex": 47,
+        "nTrips": 2
+      }, {
+        "patternId": "DC:255:04",
+        "fromIndex": 37,
+        "toIndex": 38,
+        "nTrips": 1
+      }, {
+        "patternId": "DC:256:02",
+        "fromIndex": 45,
+        "toIndex": 46,
+        "nTrips": 1
+      }, {
+        "patternId": "DC:255:06",
+        "fromIndex": 49,
+        "toIndex": 50,
+        "nTrips": 1
+      }]
+    }, {
+      "from": "C8593",
+      "to": "C7906",
+      "walkTime": 145,
+      "walkDistance": 290,
+      "waitStats": {
+        "min": 17,
+        "avg": 469,
+        "max": 1199,
+        "num": 52
+      },
+      "mode": "BUS",
+      "fromName": "17TH (WEST) ST & I ST NW",
+      "toName": "CALVERT ST NW & CLIFFBOURNE PL NW",
+      "rideStats": {
+        "min": 744,
+        "avg": 802,
+        "max": 846,
+        "num": 7
+      },
+      "routes": [{
+        "id": "DC:221",
+        "shortName": "L2",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:221:03",
+        "fromIndex": 0,
+        "toIndex": 10,
+        "nTrips": 7
+      }]
+    }],
+    "access": [{
+      "mode": "WALK",
+      "time": 136,
+      "geometry": {
+        "points": "krmlFbyduMb@??T?pJoB?",
+        "length": 5
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 170.17492013504133,
+        "relativeDirection": "RIGHT",
+        "streetName": "service road",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 62.24727850837238,
+        "relativeDirection": "RIGHT",
+        "streetName": "16th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03653960000001,
+        "lat": 38.9046855,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 56,
+      "geometry": {
+        "points": "krmlFbyduMb@??T?pJoB?",
+        "length": 5
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 170.17492013504133,
+        "relativeDirection": "RIGHT",
+        "streetName": "service road",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 62.24727850837238,
+        "relativeDirection": "RIGHT",
+        "streetName": "16th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03653960000001,
+        "lat": 38.9046855,
+        "elevation": []
+      }]
+    }],
+    "egress": [{
+      "mode": "WALK",
+      "time": 607,
+      "geometry": {
+        "points": "eeqlFlxfuM?AA_DAm@a@@oAjDABCBEDIDEBKDSDG?e@@S@U?]CQIKCMCI?GAK?MAMAWEKAOCMEMCOGKEQIOGOG_@YgB{BoBeCQSUMYKQ\\IJEFCFA@OZ[z@ILMJMFE@GBgANODI@IDMDWHOHMHSJ]VOJODKAECGMROXWRQd@_@DGJMDGFMDIFODOBK?E@CBK@I@K@O?O@O?W",
+        "length": 90
+      },
+      "walkSteps": [{
+        "distance": 89.6062624980616,
+        "relativeDirection": "DEPART",
+        "streetName": "Calvert Street Northwest",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0447019894726,
+        "lat": 38.92323899369861,
+        "elevation": []
+      }, {
+        "distance": 19.34786347392475,
+        "relativeDirection": "LEFT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0436663,
+        "lat": 38.9232512,
+        "elevation": []
+      }, {
+        "distance": 566.9303256266282,
+        "relativeDirection": "LEFT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": true,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.043677,
+        "lat": 38.923425,
+        "elevation": []
+      }, {
+        "distance": 78.87206615883203,
+        "relativeDirection": "LEFT",
+        "streetName": "Harvard Street Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.04263830000001,
+        "lat": 38.9275833,
+        "elevation": []
+      }, {
+        "distance": 188.94785274748614,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0433706,
+        "lat": 38.9280015,
+        "elevation": []
+      }, {
+        "distance": 18.00787079701316,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "link",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.0441795,
+        "lat": 38.929556500000004,
+        "elevation": []
+      }, {
+        "distance": 173.9330260890793,
+        "relativeDirection": "RIGHT",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "SOUTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0440737,
+        "lat": 38.9296851,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 1673,
+      "avg": 2343,
+      "max": 3517,
+      "num": 1
+    },
+    "summary": "routes S9/S4/S2/S1, L2 via 16TH ST NW & K ST NW",
+    "fares": [{
+      "type": "METRO_BUS_LOCAL",
+      "low": 1.6,
+      "peak": 1.6,
+      "senior": 1.6,
+      "transferReduction": false
+    }]
+  }, {
+    "transit": [{
+      "from": "C2648",
+      "to": "C8171",
+      "walkTime": 267,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 0,
+        "avg": 142,
+        "max": 360,
+        "num": 7140
+      },
+      "mode": "SUBWAY",
+      "fromName": "MT VERNON SQ/7TH ST-CONVENTION CENTER",
+      "toName": "COLUMBIA HEIGHTS METRO STATION",
+      "rideStats": {
+        "min": 300,
+        "avg": 300,
+        "max": 300,
+        "num": 28
+      },
+      "routes": [{
+        "id": "DC:GREEN",
+        "shortName": "Green",
+        "longName": "Metrorail Green Line",
+        "mode": "SUBWAY",
+        "color": "009d57"
+      }, {
+        "id": "DC:YELLOW",
+        "shortName": "Yellow",
+        "longName": "Metrorail Yellow Line",
+        "mode": "SUBWAY",
+        "color": "fde310"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:GREEN:04",
+        "fromIndex": 11,
+        "toIndex": 14,
+        "nTrips": 22
+      }, {
+        "patternId": "DC:YELLOW:09",
+        "fromIndex": 11,
+        "toIndex": 14,
+        "nTrips": 6
+      }]
+    }, {
+      "from": "C15038",
+      "to": "C4348",
+      "walkTime": 12,
+      "walkDistance": 25,
+      "waitStats": {
+        "min": 54,
+        "avg": 469,
+        "max": 954,
+        "num": 28
+      },
+      "mode": "BUS",
+      "fromName": "14TH ST NW & IRVING ST NW",
+      "toName": "17TH ST NW & MT PLEASANT ST NW",
+      "rideStats": {
+        "min": 348,
+        "avg": 348,
+        "max": 348,
+        "num": 8
+      },
+      "routes": [{
+        "id": "DC:202",
+        "shortName": "H8",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:202:02",
+        "fromIndex": 38,
+        "toIndex": 40,
+        "nTrips": 8
+      }]
+    }],
+    "access": [{
+      "mode": "WALK",
+      "time": 629,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDcAg@OMYSEOCKAKCOEKEIECOEIEGECEEGEGMSGGMGIQEGCOCUB}H?sH?qE?mE?C?eE?EAuD?S?o@@aG?G?aA?[?A",
+        "length": 42
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 169.38553397137267,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 118.71623825306904,
+        "relativeDirection": "LEFT",
+        "streetName": "Vermont Avenue Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03269200000001,
+        "lat": 38.9043976,
+        "elevation": []
+      }, {
+        "distance": 24.406941438711712,
+        "relativeDirection": "CONTINUE",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0318866,
+        "lat": 38.905190600000005,
+        "elevation": []
+      }, {
+        "distance": 26.71705735816246,
+        "relativeDirection": "CIRCLE_COUNTERCLOCKWISE",
+        "streetName": "Thomas Circle Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "exit": "1",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0317172,
+        "lat": 38.905361500000005,
+        "elevation": []
+      }, {
+        "distance": 836.5482259281686,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "M Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0315317,
+        "lat": 38.905548200000005,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 267,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDcAg@OMYSEOCKAKCOEKEIECOEIEGECEEGEGMSGGMGIQEGCOCUB}H?sH?qE?mE?C?eE?EAuD?S?o@@aG?G?aA?[?A",
+        "length": 42
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 169.38553397137267,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 118.71623825306904,
+        "relativeDirection": "LEFT",
+        "streetName": "Vermont Avenue Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03269200000001,
+        "lat": 38.9043976,
+        "elevation": []
+      }, {
+        "distance": 24.406941438711712,
+        "relativeDirection": "CONTINUE",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0318866,
+        "lat": 38.905190600000005,
+        "elevation": []
+      }, {
+        "distance": 26.71705735816246,
+        "relativeDirection": "CIRCLE_COUNTERCLOCKWISE",
+        "streetName": "Thomas Circle Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "exit": "1",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0317172,
+        "lat": 38.905361500000005,
+        "elevation": []
+      }, {
+        "distance": 836.5482259281686,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "M Street Northwest",
+        "absoluteDirection": "NORTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0315317,
+        "lat": 38.905548200000005,
+        "elevation": []
+      }]
+    }],
+    "egress": [{
+      "mode": "WALK",
+      "time": 373,
+      "geometry": {
+        "points": "m{rlFfreuMjBg@\\ILG\\IZKREDZ^lB~@?pB?pA@jA?R?AXAr@?\\?H?rA?|G?bA?pA?R?nA",
+        "length": 24
+      },
+      "walkSteps": [{
+        "distance": 132.54000567038784,
+        "relativeDirection": "DEPART",
+        "streetName": "Mount Pleasant Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03859161579548,
+        "lat": 38.931911684310656,
+        "elevation": []
+      }, {
+        "distance": 63.6206472201429,
+        "relativeDirection": "RIGHT",
+        "streetName": "Kilbourne Place Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.038161,
+        "lat": 38.930769000000005,
+        "elevation": []
+      }, {
+        "distance": 197.2700276118465,
+        "relativeDirection": "LEFT",
+        "streetName": "17th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.038852,
+        "lat": 38.930573,
+        "elevation": []
+      }, {
+        "distance": 318.67797799766805,
+        "relativeDirection": "RIGHT",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.038869,
+        "lat": 38.928799000000005,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 1621,
+      "avg": 2359,
+      "max": 3243,
+      "num": 1
+    },
+    "summary": "routes Green/Yellow, H8 via COLUMBIA HEIGHTS METRO STATION",
+    "fares": [{
+      "type": "METRO_RAIL",
+      "low": 1.7,
+      "peak": 2.1,
+      "senior": 1.05,
+      "transferReduction": false
+    }, {
+      "type": "METRO_BUS_LOCAL",
+      "low": 1.1,
+      "peak": 1.1,
+      "senior": 1.1,
+      "transferReduction": true
+    }]
+  }, {
+    "transit": [{
+      "from": "C13734",
+      "to": "C14172",
+      "walkTime": 136,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 0,
+        "avg": 78,
+        "max": 240,
+        "num": 7020
+      },
+      "mode": "SUBWAY",
+      "fromName": "MCPHERSON SQ METRO STATION",
+      "toName": "FARRAGUT METRO STATION W",
+      "rideStats": {
+        "min": 60,
+        "avg": 60,
+        "max": 60,
+        "num": 50
+      },
+      "routes": [{
+        "id": "DC:ORANGE",
+        "shortName": "Orange",
+        "longName": "Metrorail Orange Line",
+        "mode": "SUBWAY",
+        "color": "f89038"
+      }, {
+        "id": "DC:SILVER",
+        "shortName": "Silver",
+        "longName": "Metrorail Silver Line",
+        "mode": "SUBWAY",
+        "color": "CCCCC"
+      }, {
+        "id": "DC:BLUE",
+        "shortName": "Blue",
+        "longName": "Metrorail Blue Line",
+        "mode": "SUBWAY",
+        "color": "0d7bba"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:ORANGE:01",
+        "fromIndex": 14,
+        "toIndex": 15,
+        "nTrips": 20
+      }, {
+        "patternId": "DC:SILVER:04",
+        "fromIndex": 14,
+        "toIndex": 15,
+        "nTrips": 18
+      }, {
+        "patternId": "DC:BLUE:05",
+        "fromIndex": 14,
+        "toIndex": 15,
+        "nTrips": 10
+      }, {
+        "patternId": "DC:SILVER:02",
+        "fromIndex": 14,
+        "toIndex": 15,
+        "nTrips": 2
+      }]
+    }, {
+      "from": "C8593",
+      "to": "C7906",
+      "walkTime": 13,
+      "walkDistance": 26,
+      "waitStats": {
+        "min": 47,
+        "avg": 445,
+        "max": 1127,
+        "num": 41
+      },
+      "mode": "BUS",
+      "fromName": "17TH (WEST) ST & I ST NW",
+      "toName": "CALVERT ST NW & CLIFFBOURNE PL NW",
+      "rideStats": {
+        "min": 744,
+        "avg": 802,
+        "max": 846,
+        "num": 7
+      },
+      "routes": [{
+        "id": "DC:221",
+        "shortName": "L2",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:221:03",
+        "fromIndex": 0,
+        "toIndex": 10,
+        "nTrips": 7
+      }]
+    }],
+    "access": [{
+      "mode": "WALK",
+      "time": 313,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDTJ`@{A?_Ad@?R?P?NAV?pDAV?V?V???fD@T??A",
+        "length": 20
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 255.22319582996533,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 309.240210218654,
+        "relativeDirection": "RIGHT",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0319791,
+        "lat": 38.904113200000005,
+        "elevation": []
+      }, {
+        "distance": 0.7002453706078838,
+        "relativeDirection": "LEFT",
+        "streetName": "I Street Northwest",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0319661,
+        "lat": 38.9013323,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 136,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDTJ`@{A?_Ad@?R?P?NAV?pDAV?V?V???fD@T?",
+        "length": 19
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 255.22319582996533,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 309.240210218654,
+        "relativeDirection": "RIGHT",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0319791,
+        "lat": 38.904113200000005,
+        "elevation": []
+      }]
+    }],
+    "egress": [{
+      "mode": "WALK",
+      "time": 607,
+      "geometry": {
+        "points": "eeqlFlxfuM?AA_DAm@a@@oAjDABCBEDIDEBKDSDG?e@@S@U?]CQIKCMCI?GAK?MAMAWEKAOCMEMCOGKEQIOGOG_@YgB{BoBeCQSUMYKQ\\IJEFCFA@OZ[z@ILMJMFE@GBgANODI@IDMDWHOHMHSJ]VOJODKAECGMROXWRQd@_@DGJMDGFMDIFODOBK?E@CBK@I@K@O?O@O?W",
+        "length": 90
+      },
+      "walkSteps": [{
+        "distance": 89.6062624980616,
+        "relativeDirection": "DEPART",
+        "streetName": "Calvert Street Northwest",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0447019894726,
+        "lat": 38.92323899369861,
+        "elevation": []
+      }, {
+        "distance": 19.34786347392475,
+        "relativeDirection": "LEFT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0436663,
+        "lat": 38.9232512,
+        "elevation": []
+      }, {
+        "distance": 566.9303256266282,
+        "relativeDirection": "LEFT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": true,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.043677,
+        "lat": 38.923425,
+        "elevation": []
+      }, {
+        "distance": 78.87206615883203,
+        "relativeDirection": "LEFT",
+        "streetName": "Harvard Street Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.04263830000001,
+        "lat": 38.9275833,
+        "elevation": []
+      }, {
+        "distance": 188.94785274748614,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "Adams Mill Road Northwest",
+        "absoluteDirection": "NORTHWEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0433706,
+        "lat": 38.9280015,
+        "elevation": []
+      }, {
+        "distance": 18.00787079701316,
+        "relativeDirection": "SLIGHTLY_RIGHT",
+        "streetName": "link",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.0441795,
+        "lat": 38.929556500000004,
+        "elevation": []
+      }, {
+        "distance": 173.9330260890793,
+        "relativeDirection": "RIGHT",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "SOUTHEAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0440737,
+        "lat": 38.9296851,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 1743,
+      "avg": 2365,
+      "max": 3342,
+      "num": 1
+    },
+    "summary": "routes Orange/Silver/Blue, L2 via FARRAGUT METRO STATION W",
+    "fares": [{
+      "type": "METRO_RAIL",
+      "low": 1.7,
+      "peak": 2.1,
+      "senior": 1.05,
+      "transferReduction": false
+    }, {
+      "type": "METRO_BUS_LOCAL",
+      "low": 1.1,
+      "peak": 1.1,
+      "senior": 1.1,
+      "transferReduction": true
+    }]
+  }, {
+    "transit": [{
+      "from": "C13817",
+      "to": "C16224",
+      "walkTime": 56,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 0,
+        "avg": 154,
+        "max": 654,
+        "num": 7170
+      },
+      "mode": "BUS",
+      "fromName": "16TH ST NW & M ST NW",
+      "toName": "14TH ST NW & I ST NW",
+      "rideStats": {
+        "min": 210,
+        "avg": 257,
+        "max": 342,
+        "num": 32
+      },
+      "routes": [{
+        "id": "DC:256",
+        "shortName": "S4",
+        "mode": "BUS"
+      }, {
+        "id": "DC:255",
+        "shortName": "S2",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:255:10",
+        "fromIndex": 37,
+        "toIndex": 40,
+        "nTrips": 10
+      }, {
+        "patternId": "DC:255:07",
+        "fromIndex": 9,
+        "toIndex": 12,
+        "nTrips": 6
+      }, {
+        "patternId": "DC:255:09",
+        "fromIndex": 49,
+        "toIndex": 52,
+        "nTrips": 6
+      }, {
+        "patternId": "DC:256:05",
+        "fromIndex": 45,
+        "toIndex": 53,
+        "nTrips": 6
+      }, {
+        "patternId": "DC:255:08",
+        "fromIndex": 46,
+        "toIndex": 49,
+        "nTrips": 2
+      }, {
+        "patternId": "DC:255:04",
+        "fromIndex": 37,
+        "toIndex": 40,
+        "nTrips": 1
+      }, {
+        "patternId": "DC:255:06",
+        "fromIndex": 49,
+        "toIndex": 52,
+        "nTrips": 1
+      }]
+    }, {
+      "from": "C15253",
+      "to": "C7176",
+      "walkTime": 140,
+      "walkDistance": 280,
+      "waitStats": {
+        "min": 10,
+        "avg": 348,
+        "max": 850,
+        "num": 30
+      },
+      "mode": "BUS",
+      "fromName": "13TH ST NW & K ST NW",
+      "toName": "IRVING ST NW & SHERMAN AV NW",
+      "rideStats": {
+        "min": 636,
+        "avg": 636,
+        "max": 636,
+        "num": 8
+      },
+      "routes": [{
+        "id": "DC:91",
+        "shortName": "63",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:91:02",
+        "fromIndex": 6,
+        "toIndex": 17,
+        "nTrips": 8
+      }]
+    }],
+    "access": [{
+      "mode": "WALK",
+      "time": 136,
+      "geometry": {
+        "points": "krmlFbyduMb@??T?pJoB?",
+        "length": 5
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 170.17492013504133,
+        "relativeDirection": "RIGHT",
+        "streetName": "service road",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 62.24727850837238,
+        "relativeDirection": "RIGHT",
+        "streetName": "16th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03653960000001,
+        "lat": 38.9046855,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 56,
+      "geometry": {
+        "points": "krmlFbyduMb@??T?pJoB?",
+        "length": 5
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 170.17492013504133,
+        "relativeDirection": "RIGHT",
+        "streetName": "service road",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": true,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 62.24727850837238,
+        "relativeDirection": "RIGHT",
+        "streetName": "16th Street Northwest",
+        "absoluteDirection": "NORTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03653960000001,
+        "lat": 38.9046855,
+        "elevation": []
+      }]
+    }],
+    "egress": [{
+      "mode": "WALK",
+      "time": 723,
+      "geometry": {
+        "points": "}grlFrfcuM@ZFrA@RBx@@LB^?J@ZBj@@P@P?F?B?F?rA?tD?j@?dB?~B?xDC\\Gb@GTAFG^A^?PTzIDpB@P?L?B?HEvCAv@Ah@EhBAZAZ?HExCClBAXAr@?\\?H?rA?|G?bA?pA?R?nA",
+        "length": 53
+      },
+      "walkSteps": [{
+        "distance": 1394.0501635238231,
+        "relativeDirection": "DEPART",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.02649367980047,
+        "lat": 38.92879824537084,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 1831,
+      "avg": 2410,
+      "max": 3537,
+      "num": 1
+    },
+    "summary": "routes S4/S2, 63 via 14TH ST NW & I ST NW",
+    "fares": [{
+      "type": "METRO_BUS_LOCAL",
+      "low": 1.6,
+      "peak": 1.6,
+      "senior": 1.6,
+      "transferReduction": false
+    }]
+  }, {
+    "transit": [{
+      "from": "C13734",
+      "to": "C12844",
+      "walkTime": 136,
+      "walkDistance": 0,
+      "waitStats": {
+        "min": 0,
+        "avg": 77,
+        "max": 240,
+        "num": 7140
+      },
+      "mode": "SUBWAY",
+      "fromName": "MCPHERSON SQ METRO STATION",
+      "toName": "METRO CENTER METRO STATION",
+      "rideStats": {
+        "min": 60,
+        "avg": 60,
+        "max": 60,
+        "num": 50
+      },
+      "routes": [{
+        "id": "DC:ORANGE",
+        "shortName": "Orange",
+        "longName": "Metrorail Orange Line",
+        "mode": "SUBWAY",
+        "color": "f89038"
+      }, {
+        "id": "DC:SILVER",
+        "shortName": "Silver",
+        "longName": "Metrorail Silver Line",
+        "mode": "SUBWAY",
+        "color": "CCCCC"
+      }, {
+        "id": "DC:BLUE",
+        "shortName": "Blue",
+        "longName": "Metrorail Blue Line",
+        "mode": "SUBWAY",
+        "color": "0d7bba"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:ORANGE:03",
+        "fromIndex": 11,
+        "toIndex": 12,
+        "nTrips": 21
+      }, {
+        "patternId": "DC:SILVER:01",
+        "fromIndex": 13,
+        "toIndex": 14,
+        "nTrips": 20
+      }, {
+        "patternId": "DC:BLUE:04",
+        "fromIndex": 12,
+        "toIndex": 13,
+        "nTrips": 9
+      }]
+    }, {
+      "from": "C12828",
+      "to": "C7176",
+      "walkTime": 38,
+      "walkDistance": 77,
+      "waitStats": {
+        "min": 40,
+        "avg": 388,
+        "max": 1000,
+        "num": 47
+      },
+      "mode": "BUS",
+      "fromName": "11TH ST NW & G ST NW",
+      "toName": "IRVING ST NW & SHERMAN AV NW",
+      "rideStats": {
+        "min": 864,
+        "avg": 864,
+        "max": 864,
+        "num": 8
+      },
+      "routes": [{
+        "id": "DC:91",
+        "shortName": "63",
+        "mode": "BUS"
+      }],
+      "segmentPatterns": [{
+        "patternId": "DC:91:02",
+        "fromIndex": 3,
+        "toIndex": 17,
+        "nTrips": 8
+      }]
+    }],
+    "access": [{
+      "mode": "WALK",
+      "time": 313,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDTJ`@{A?_Ad@?R?P?NAV?pDAV?V?V???fD@T??A",
+        "length": 20
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 255.22319582996533,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 309.240210218654,
+        "relativeDirection": "RIGHT",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0319791,
+        "lat": 38.904113200000005,
+        "elevation": []
+      }, {
+        "distance": 0.7002453706078838,
+        "relativeDirection": "LEFT",
+        "streetName": "I Street Northwest",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0319661,
+        "lat": 38.9013323,
+        "elevation": []
+      }]
+    }, {
+      "mode": "BICYCLE",
+      "time": 136,
+      "geometry": {
+        "points": "krmlFbyduMb@??mEx@iDTJ`@{A?_Ad@?R?P?NAV?pDAV?V?V???fD@T?",
+        "length": 19
+      },
+      "walkSteps": [{
+        "distance": 19.156302975141763,
+        "relativeDirection": "DEPART",
+        "streetName": "15th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457228061139,
+        "lat": 38.90486037559157,
+        "elevation": []
+      }, {
+        "distance": 255.22319582996533,
+        "relativeDirection": "LEFT",
+        "streetName": "Alley",
+        "absoluteDirection": "EAST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.03457300000001,
+        "lat": 38.9046881,
+        "elevation": []
+      }, {
+        "distance": 309.240210218654,
+        "relativeDirection": "RIGHT",
+        "streetName": "14th Street Northwest",
+        "absoluteDirection": "SOUTH",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.0319791,
+        "lat": 38.904113200000005,
+        "elevation": []
+      }]
+    }],
+    "egress": [{
+      "mode": "WALK",
+      "time": 723,
+      "geometry": {
+        "points": "}grlFrfcuM@ZFrA@RBx@@LB^?J@ZBj@@P@P?F?B?F?rA?tD?j@?dB?~B?xDC\\Gb@GTAFG^A^?PTzIDpB@P?L?B?HEvCAv@Ah@EhBAZAZ?HExCClBAXAr@?\\?H?rA?|G?bA?pA?R?nA",
+        "length": 53
+      },
+      "walkSteps": [{
+        "distance": 1394.0501635238231,
+        "relativeDirection": "DEPART",
+        "streetName": "Irving Street Northwest",
+        "absoluteDirection": "WEST",
+        "stayOn": false,
+        "area": false,
+        "bogusName": false,
+        "lon": -77.02649367980047,
+        "lat": 38.92879824537084,
+        "elevation": []
+      }]
+    }],
+    "stats": {
+      "min": 1997,
+      "avg": 2510,
+      "max": 3374,
+      "num": 1
+    },
+    "summary": "routes Orange/Silver/Blue, 63 via METRO CENTER METRO STATION",
+    "fares": [{
+      "type": "METRO_RAIL",
+      "low": 1.7,
+      "peak": 2.1,
+      "senior": 1.05,
+      "transferReduction": false
+    }, {
+      "type": "METRO_BUS_LOCAL",
+      "low": 1.1,
+      "peak": 1.1,
+      "senior": 1.1,
+      "transferReduction": true
+    }]
+  }]
+}
