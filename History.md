@@ -1,6 +1,7 @@
 
-## Latest
+## 0.4.0 — 2014-08-21
 
+* Add tests & test coverage
 * Merge in factors & rates instead of replace
 * Add `component-clone` as a Node.js dependency
 

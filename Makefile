@@ -11,10 +11,4 @@ clean:
 node_modules:
 	npm install
 
-test: node_modules
-	@node_modules/.bin/mocha
-
-test-cov: node_modules
-	@node_modules/.bin/istanbul cover node_modules/.bin/_mocha
-
 .PHONY: clean
