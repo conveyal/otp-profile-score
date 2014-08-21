@@ -2,15 +2,12 @@
 # otp-profile-score
 
 [![NPM version][npm-image]][npm-url]
-[![Latest tag][github-tag]][github-url]
 [![Build status][travis-image]][travis-url]
 [![Test coverage][coveralls-image]][coveralls-url]
 [![Dependency Status][david-image]][david-url]
 
 [npm-image]: https://img.shields.io/npm/v/otp-profile-score.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/otp-profile-score
-[github-tag]: http://img.shields.io/github/tag/conveyal/otp-profile-score.svg?style=flat-square
-[github-url]: https://github.com/conveyal/otp-profile-score/tags
 [travis-image]: https://img.shields.io/travis/conveyal/otp-profile-score.svg?style=flat-square
 [travis-url]: https://travis-ci.org/conveyal/otp-profile-score
 [coveralls-image]: https://img.shields.io/coveralls/conveyal/otp-profile-score.svg?style=flat-square
