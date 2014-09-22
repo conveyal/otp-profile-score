@@ -212,7 +212,7 @@ ProfileScore.prototype.tally = function(o) {
     });
 
     o.fares.forEach(function(fare) {
-      o.transitCost += fare.peak;
+      if (fare) o.transitCost += fare.peak;
     });
 
     o.cost += o.transitCost;
