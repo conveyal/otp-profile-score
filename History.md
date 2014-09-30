@@ -1,4 +1,9 @@
 
+## 0.4.1 — 2014-09-30
+
+* Use correct values
+* Update test data
+
 ## 0.4.0 — 2014-08-21
 
 * Add tests & test coverage
