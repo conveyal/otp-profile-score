@@ -31,7 +31,7 @@ describe('OTP Profile Score', function() {
     it('should tally and score an option', function() {
       var scorer = new Scorer();
       var option = scorer.processOption(data.options[0]);
-      assert(option.score === 36.26874064215055);
+      assert(option.score === 37.955000000000005, option.score);
     });
 
     it('should handle factors as functions', function() {
@@ -44,7 +44,7 @@ describe('OTP Profile Score', function() {
         }
       });
       var option = scorer.processOption(data.options[0]);
-      assert(option.score === 38.077417997008446);
+      assert(option.score === 41.95, option.score);
     });
   });
 
@@ -52,7 +52,7 @@ describe('OTP Profile Score', function() {
     it('should tally and score all access modes for all options', function() {
       var scorer = new Scorer();
       var options = scorer.processOptions(data.options);
-      assert(options.length === 23);
+      assert(options.length === 12, options.length);
 
       for (var i = 0; i < options.length; i++) {
         assert(options[i].score !== undefined);
