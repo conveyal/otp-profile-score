@@ -1,4 +1,8 @@
 
+## 0.4.2 — 2014-10-09
+
+* Don't parse options without access modes
+
 ## 0.4.1 — 2014-09-30
 
 * Use correct values
