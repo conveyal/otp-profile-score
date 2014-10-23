@@ -1,4 +1,8 @@
 
+## 0.4.3 — 2014-10-23
+
+* Actually factor in transfers
+
 ## 0.4.2 — 2014-10-09
 
 * Don't parse options without access modes
