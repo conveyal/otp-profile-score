@@ -1,4 +1,8 @@
 
+## 0.4.4 — 2014-10-30
+
+* Calculate CO2 per transit trip, based on WMATA's sustainability report and ridership numbers
+
 ## 0.4.3 — 2014-10-23
 
 * Actually factor in transfers
