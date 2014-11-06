@@ -1,4 +1,9 @@
 
+## 0.4.5 — 2014-11-06
+
+* Tally the time in transit
+* Default transit cost to 0
+
 ## 0.4.4 — 2014-10-30
 
 * Calculate CO2 per transit trip, based on WMATA's sustainability report and ridership numbers
