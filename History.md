@@ -1,4 +1,8 @@
 
+## 0.5.1 — 2014-12-24
+
+* Check for the existence of fares
+
 ## 0.5.0 — 2014-12-24
 
 * Don't convert time into minutes

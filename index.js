@@ -232,9 +232,11 @@ ProfileScore.prototype.tally = function(o) {
       o.emissions += self.rates.co2PerTransitTrip;
     });
 
-    o.fares.forEach(function(fare) {
-      if (fare && fare.peak) o.transitCost += fare.peak;
-    });
+    if (o.fares) {
+      o.fares.forEach(function(fare) {
+        if (fare && fare.peak) o.transitCost += fare.peak;
+      });
+    }
 
     o.cost += o.transitCost;
   }
