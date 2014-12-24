@@ -1,4 +1,10 @@
 
+## 0.5.0 — 2014-12-24
+
+* Don't convert time into minutes
+* Check for walkSteps existence
+* Check for transitSegments existence
+
 ## 0.4.5 — 2014-11-06
 
 * Tally the time in transit
