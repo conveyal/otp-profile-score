@@ -1,4 +1,8 @@
 
+## 0.5.2 — 2015-01-21
+
+* Fix bike calorie counting
+
 ## 0.5.1 — 2014-12-24
 
 * Check for the existence of fares
