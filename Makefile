@@ -11,4 +11,7 @@ clean:
 node_modules:
 	npm install
 
-.PHONY: clean
+Readme.md:
+	dox -r < index.js | doxme --readme > Readme.md
+
+.PHONY: clean Readme.md
