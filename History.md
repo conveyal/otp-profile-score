@@ -1,4 +1,9 @@
 
+## 0.5.3 — 2015-03-25
+
+* Tally bicycle_rent similar to bicycle
+* Automate `Readme.md` creation.
+
 ## 0.5.2 — 2015-01-21
 
 * Fix bike calorie counting
