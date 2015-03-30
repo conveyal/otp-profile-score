@@ -1,6 +1,6 @@
 {
   "name": "otp-profile-score",
-  "version": "0.5.3",
+  "version": "0.5.4",
   "description": "Score OTP profiles",
   "dependencies": {
     "component-clone": "0"

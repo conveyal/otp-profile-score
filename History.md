@@ -1,4 +1,9 @@
 
+## 0.5.4 — 2015-03-30
+
+* Utilize `streetEdges` instead of `walkSteps`
+* Add walk distance access for bicycle_rent
+
 ## 0.5.3 — 2015-03-25
 
 * Tally bicycle_rent similar to bicycle
