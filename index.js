@@ -198,7 +198,7 @@ ProfileScore.prototype.tally = function(o) {
   // Tally egress
   if (o.egress && o.egress.length > 0) {
     var egress = o.egress[0];
-    var egressMode = o.mode.toLowerCase();
+    var egressMode = egress.mode.toLowerCase();
 
     addStreetEdges(o, egressMode, egress.streetEdges);
 
