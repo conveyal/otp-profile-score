@@ -1,4 +1,9 @@
 
+## 0.6.0 — 2015-03-31
+
+* Add all modes, filter out uniques
+* Split up and tally `egress` options
+
 ## 0.5.4 — 2015-03-30
 
 * Utilize `streetEdges` instead of `walkSteps`
