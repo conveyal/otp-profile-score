@@ -280,7 +280,7 @@ function addStreetEdges(o, mode, streetEdges) {
       o.driveDistance += streetEdgeDistanceForMode(streetEdges, 'car');
       break;
     case 'bicycle':
-      o.bikeDistance += streetEdgeDistanceForMode(streetEdges);
+      o.bikeDistance += streetEdgeDistanceForMode(streetEdges, 'bicycle');
       break;
     case 'bicycle_rent':
       o.modes.push('walk');
