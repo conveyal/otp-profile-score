@@ -277,7 +277,7 @@ function addStreetEdges(o, mode, streetEdges) {
 
   switch (mode) {
     case 'car':
-      o.driveDistance += streetEdgeDistanceForMode(streetEdges);
+      o.driveDistance += streetEdgeDistanceForMode(streetEdges, 'car');
       break;
     case 'bicycle':
       o.bikeDistance += streetEdgeDistanceForMode(streetEdges);
@@ -288,18 +288,18 @@ function addStreetEdges(o, mode, streetEdges) {
       o.walkDistance += streetEdgeDistanceForMode(streetEdges, 'walk');
       break;
     case 'walk':
-      o.walkDistance += streetEdgeDistanceForMode(streetEdges);
+      o.walkDistance += streetEdgeDistanceForMode(streetEdges, 'walk');
       break;
   }
 }
 
 function streetEdgeDistanceForMode(streetEdges, mode) {
-  var tallyMode = mode ? false : true;
+  var currentMode = 'walk';
   return streetEdges.reduce(function(distance, step) {
     if (step.mode) {
-      tallyMode = step.mode.toLowerCase() === mode;
+      currentMode = step.mode.toLowerCase();
     }
-    if (tallyMode) {
+    if (currentMode === mode) {
       distance += step.distance;
     }
     return distance;
