@@ -1,4 +1,8 @@
 
+## 0.6.1 — 2015-04-01
+
+* Fix mode distance calculations
+
 ## 0.6.0 — 2015-03-31
 
 * Add all modes, filter out uniques
