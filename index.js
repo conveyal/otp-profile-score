@@ -14,7 +14,6 @@ var WALKING_MET = 3.8
 var CO2_PER_TRANSIT_TRIP = 239000000 / 200000000 // CO2 per passenger trip. Kilograms of CO2 / Rides. http://www.wmata.com/Images/Mrel/MF_Uploads/sustainability-web-2014-04-22.pdf
 
 var DEFAULT_TIME_FACTORS = {
-  bikeParking: 1,
   calories: -0.01,
   carParking: 5,
   co2: 0.5,
@@ -138,7 +137,7 @@ ProfileScore.prototype.score = function (o) {
       case 'bicycle':
       case 'bicycle_rent':
         // Add time for locking your bike
-        score += applyFactor(1, factors.bikeParking)
+        score += applyFactor(1, factors.transfer)
         totalCalories += o.bikeCalories
         break
       case 'walk':

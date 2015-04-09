@@ -1,4 +1,9 @@
 
+## 0.6.2 — 2015-04-09
+
+* Penalize biking as a transfer
+* Use [standard](/feross/standard)
+
 ## 0.6.1 — 2015-04-01
 
 * Fix mode distance calculations
