@@ -8,7 +8,8 @@
   "devDependencies": {
     "component": "0",
     "istanbul": "0",
-    "mocha": "1"
+    "mocha": "1",
+    "standard": "^3.5.0"
   },
   "main": "index.js",
   "scripts": {
@@ -21,7 +22,8 @@
     "url": "git@github.com:conveyal/otp-profile-score.git"
   },
   "keywords": [
-    "OTP", "OpenTripPlanner"
+    "OTP",
+    "OpenTripPlanner"
   ],
   "author": "Conveyal",
   "license": "MIT",
