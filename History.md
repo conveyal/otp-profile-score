@@ -1,4 +1,8 @@
 
+## 0.6.3 — 2015-05-29
+
+* Handle mode `CAR_PARK`
+
 ## 0.6.2 — 2015-04-09
 
 * Penalize biking as a transfer
