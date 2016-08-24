@@ -6,10 +6,10 @@
     "component-clone": "0"
   },
   "devDependencies": {
-    "component": "0",
+    "component": "1.1.0",
     "istanbul": "0",
-    "mocha": "1",
-    "standard": "^3.5.0"
+    "mocha": "3.0.2",
+    "standard": "^8.0.0"
   },
   "main": "index.js",
   "scripts": {
