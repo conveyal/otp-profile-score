@@ -1,6 +1,18 @@
-node_js:
-- "0.12"
+sudo: false
 language: node_js
-script: "npm run-script test-travis"
-before_install: "npm update -g npm"
-after_script: "npm install coveralls@2 && cat ./coverage/lcov.info | coveralls"
+cache:
+  yarn: true
+notifications:
+  email: false
+node_js:
+  - '6'
+before_script:
+  - yarn global add codecov
+script:
+  - yarn run cover
+  - codecov
+after_success:
+  - yarn run semantic-release
+branches:
+  except:
+    - /^v\d+\.\d+\.\d+$/

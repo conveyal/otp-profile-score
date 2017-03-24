@@ -3,19 +3,20 @@
   "version": "0.6.3",
   "description": "Score OTP profiles",
   "dependencies": {
-    "component-clone": "0"
+    "lodash.clonedeep": "^4.5.0"
   },
   "devDependencies": {
-    "component": "1.1.0",
-    "istanbul": "0",
-    "mocha": "3.1.0",
-    "standard": "^8.0.0"
+    "documentation": "^4.0.0-beta.18",
+    "mastarm": "^3.6.1",
+    "semantic-release": "^6.3.2"
   },
   "main": "index.js",
   "scripts": {
-    "test": "node_modules/.bin/mocha --reporter spec",
-    "test-cov": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha -- --reporter dot",
-    "test-travis": "node_modules/.bin/istanbul cover node_modules/mocha/bin/_mocha --report lcovonly -- --reporter dot"
+    "cover": "yarn run test -- --coverage --coverage-paths index.js",
+    "generate-docs": "documentation readme index.js --section=API --markdown-toc=true",
+    "lint-docs": "documentation lint index.js",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post",
+    "test": "mastarm lint && yarn run lint-docs && mastarm test -e node"
   },
   "repository": {
     "type": "git",

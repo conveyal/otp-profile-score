@@ -1,19 +1,14 @@
-var clone
-try {
-  clone = require('clone')
-} catch (e) {
-  clone = require('component-clone')
-}
+const clone = require('lodash.clonedeep')
 
-var CO2_PER_GALLON = 8.887 // Kilograms of CO2 burned per gallon of gasoline
-var CYCLING_MET = 8 // Find MET scores here: http://appliedresearch.cancer.gov/atus-met/met.php
-var METERS_TO_MILES = 0.000621371
-var SECONDS_TO_HOURS = 1 / 60 / 60
-var WALKING_MET = 3.8
+const CO2_PER_GALLON = 8.887 // Kilograms of CO2 burned per gallon of gasoline
+const CYCLING_MET = 8 // Find MET scores here: http://appliedresearch.cancer.gov/atus-met/met.php
+const METERS_TO_MILES = 0.000621371
+const SECONDS_TO_HOURS = 1 / 60 / 60
+const WALKING_MET = 3.8
 
-var CO2_PER_TRANSIT_TRIP = 239000000 / 200000000 // CO2 per passenger trip. Kilograms of CO2 / Rides. http://www.wmata.com/Images/Mrel/MF_Uploads/sustainability-web-2014-04-22.pdf
+const CO2_PER_TRANSIT_TRIP = 239000000 / 200000000 // CO2 per passenger trip. Kilograms of CO2 / Rides. http://www.wmata.com/Images/Mrel/MF_Uploads/sustainability-web-2014-04-22.pdf
 
-var DEFAULT_TIME_FACTORS = {
+const DEFAULT_TIME_FACTORS = {
   calories: -0.01,
   carParking: 5,
   co2: 0.5,
@@ -21,7 +16,7 @@ var DEFAULT_TIME_FACTORS = {
   transfer: 5
 }
 
-var DEFAULT_RATES = {
+const DEFAULT_RATES = {
   bikeSpeed: 4.1, // in m/s
   carParkingCost: 10,
   co2PerTransitTrip: CO2_PER_TRANSIT_TRIP,
@@ -40,8 +35,8 @@ module.exports = ProfileScore
  * @param {Object=} opts.factors Factors to override the defaults.
  * @param {Object=} opts.rates Rates to to override the defaults.
  * @example
- * var ProfileScore = require('otp-profile-score')
- * var scorer = new ProfileScore({ factors: {}, rates: {} })
+ * const ProfileScore = require('otp-profile-score')
+ * const scorer = new ProfileScore({ factors: {}, rates: {} })
  */
 
 function ProfileScore (opts) {
@@ -58,18 +53,18 @@ function ProfileScore (opts) {
  * @returns {Object} processedOption Annotated and scored.
  * @example
  * getProfileFromOTP(query, function(err, profile) {
- *   var scoredOption = scorer.processOption(profile[0])
+ *   const scoredOption = scorer.processOption(profile[0])
  * })
  */
 
-ProfileScore.prototype.processOption = function (o) {
+ProfileScore.prototype.processOption = function (option) {
   // Tally the data
-  o = this.tally(o)
+  option = this.tally(option)
 
   // Score the option
-  o.score = this.score(o)
+  option.score = this.score(option)
 
-  return o
+  return option
 }
 
 /**
@@ -79,26 +74,26 @@ ProfileScore.prototype.processOption = function (o) {
  * @returns {Array} processedOptions Options that are split up by access mode and annotated with a score.
  * @example
  * getProfileFromOTP(query, function(err, profile) {
- *   var allScoredResults = scorer.processOptions(profile)
+ *   const allScoredResults = scorer.processOptions(profile)
  * })
  */
 
 ProfileScore.prototype.processOptions = function (options) {
-  var processed = []
-  var self = this
+  const processed = []
+  const self = this
 
-  options.forEach(function (o) {
-    if (o.access) {
-      o.access.forEach(function (a, accessIndex) {
-        if (o.egress && o.egress.length > 0) {
-          o.egress.forEach(function (e, egressIndex) {
-            var opt = clone(o)
+  options.forEach(function (option) {
+    if (option.access) {
+      option.access.forEach(function (a, accessIndex) {
+        if (option.egress && option.egress.length > 0) {
+          option.egress.forEach(function (e, egressIndex) {
+            const opt = clone(option)
             opt.access = [clone(a)]
             opt.egress = [clone(e)]
             processed.push(self.processOption(opt))
           })
         } else {
-          var opt = clone(o)
+          const opt = clone(option)
           opt.access = [clone(a)]
           processed.push(self.processOption(opt))
         }
@@ -117,15 +112,15 @@ ProfileScore.prototype.processOptions = function (options) {
  * Get the weighted score of an option based on the factors, weights, and tallied totals for that option.
  *
  * @param {Object} option
- * @returns {Number} score
+ * @returns {number} score
  */
 
-ProfileScore.prototype.score = function (o) {
-  var factors = this.factors
-  var score = o.time / 60
-  var totalCalories = 0
+ProfileScore.prototype.score = function (option) {
+  const factors = this.factors
+  let score = option.time / 60
+  let totalCalories = 0
 
-  o.modes.forEach(function (mode) {
+  option.modes.forEach(function (mode) {
     switch (mode) {
       case 'car':
       case 'car_park':
@@ -133,25 +128,25 @@ ProfileScore.prototype.score = function (o) {
         score += applyFactor(1, factors.carParking)
 
         // Add time for CO2 emissions
-        score += applyFactor(o.emissions, factors.co2)
+        score += applyFactor(option.emissions, factors.co2)
         break
       case 'bicycle':
       case 'bicycle_rent':
         // Add time for locking your bike
         score += applyFactor(1, factors.transfer)
-        totalCalories += o.bikeCalories
+        totalCalories += option.bikeCalories
         break
       case 'walk':
-        totalCalories += o.walkCalories
+        totalCalories += option.walkCalories
         break
     }
   })
 
   // Add time for each transfer
-  score += applyFactor(o.transfers, this.factors.transfer)
+  score += applyFactor(option.transfers, this.factors.transfer)
 
   // Add time for each dollar spent
-  score += applyFactor(o.cost, this.factors.cost)
+  score += applyFactor(option.cost, this.factors.cost)
 
   // Add/subtract time for calories
   score += applyFactor(totalCalories, this.factors.calories)
@@ -166,135 +161,135 @@ ProfileScore.prototype.score = function (o) {
  * @returns {Object} talliedOption
  */
 
-ProfileScore.prototype.tally = function (o) {
+ProfileScore.prototype.tally = function (option) {
   // Defaults
-  o.bikeCalories = 0
-  o.calories = 0
-  o.cost = 0
-  o.emissions = 0
-  o.modes = []
-  o.time = 0
-  o.timeInTransit = 0
-  o.transfers = 0
-  o.transitCost = 0
-  o.walkCalories = 0
+  option.bikeCalories = 0
+  option.calories = 0
+  option.cost = 0
+  option.emissions = 0
+  option.modes = []
+  option.time = 0
+  option.timeInTransit = 0
+  option.transfers = 0
+  option.transitCost = 0
+  option.walkCalories = 0
 
   // Bike/Drive/Walk distances
-  o.bikeDistance = 0
-  o.driveDistance = 0
-  o.walkDistance = 0
+  option.bikeDistance = 0
+  option.driveDistance = 0
+  option.walkDistance = 0
 
   // Tally access
-  if (o.access && o.access.length > 0) {
-    var access = o.access[0]
-    var accessMode = access.mode.toLowerCase()
+  if (option.access && option.access.length > 0) {
+    const access = option.access[0]
+    const accessMode = access.mode.toLowerCase()
 
-    addStreetEdges(o, accessMode, access.streetEdges)
+    addStreetEdges(option, accessMode, access.streetEdges)
 
-    o.time += access.time
+    option.time += access.time
   }
 
   // Tally egress
-  if (o.egress && o.egress.length > 0) {
-    var egress = o.egress[0]
-    var egressMode = egress.mode.toLowerCase()
+  if (option.egress && option.egress.length > 0) {
+    const egress = option.egress[0]
+    const egressMode = egress.mode.toLowerCase()
 
-    addStreetEdges(o, egressMode, egress.streetEdges)
+    addStreetEdges(option, egressMode, egress.streetEdges)
 
-    o.time += egress.time
+    option.time += egress.time
   }
 
   // Tally transit
-  if (o.transit && o.transit.length > 0) {
-    o.transfers = o.transit.length - 1
-    o.transitCost = 0
-    o.trips = Infinity
+  if (option.transit && option.transit.length > 0) {
+    option.transfers = option.transit.length - 1
+    option.transitCost = 0
+    option.trips = Infinity
 
-    var self = this
-    o.transit.forEach(function (segment) {
-      o.modes.push(segment.mode.toLowerCase())
+    const self = this
+    option.transit.forEach(function (segment) {
+      option.modes.push(segment.mode.toLowerCase())
 
-      var trips = segment.segmentPatterns ? segment.segmentPatterns[0].nTrips : 0
-      if (trips < o.trips) o.trips = trips
+      const trips = segment.segmentPatterns ? segment.segmentPatterns[0].nTrips : 0
+      if (trips < option.trips) option.trips = trips
 
       // Total & add the time in transit
-      var timeInTransit = (segment.waitStats.avg + segment.rideStats.avg)
-      o.timeInTransit += timeInTransit
+      const timeInTransit = (segment.waitStats.avg + segment.rideStats.avg)
+      option.timeInTransit += timeInTransit
 
       // Add walk time, wait time, & ride time
-      o.time += segment.walkTime + timeInTransit
+      option.time += segment.walkTime + timeInTransit
 
       // Increment the total walk distance
-      o.walkDistance += segment.walkDistance
+      option.walkDistance += segment.walkDistance
 
       // Add CO2 per transit leg
-      o.emissions += self.rates.co2PerTransitTrip
+      option.emissions += self.rates.co2PerTransitTrip
     })
 
-    if (o.fares) {
-      o.fares.forEach(function (fare) {
-        if (fare && fare.peak) o.transitCost += fare.peak
+    if (option.fares) {
+      option.fares.forEach(function (fare) {
+        if (fare && fare.peak) option.transitCost += fare.peak
       })
     }
 
-    o.cost += o.transitCost
+    option.cost += option.transitCost
   }
 
   // Set the walking calories burned
-  if (o.modes.indexOf('walk') !== -1) {
-    o.walkCalories = caloriesBurned(WALKING_MET, this.rates.weight, (o.walkDistance / this.rates.walkSpeed) *
+  if (option.modes.indexOf('walk') !== -1) {
+    option.walkCalories = caloriesBurned(WALKING_MET, this.rates.weight, (option.walkDistance / this.rates.walkSpeed) *
       SECONDS_TO_HOURS)
   }
 
   // Set the biking calories burned
-  if (o.modes.indexOf('bicycle') !== -1 || o.modes.indexOf('bicycle_rent') !== -1) {
-    o.bikeCalories = caloriesBurned(CYCLING_MET, this.rates.weight, (o.bikeDistance / this.rates.bikeSpeed) *
+  if (option.modes.indexOf('bicycle') !== -1 || option.modes.indexOf('bicycle_rent') !== -1) {
+    option.bikeCalories = caloriesBurned(CYCLING_MET, this.rates.weight, (option.bikeDistance / this.rates.bikeSpeed) *
       SECONDS_TO_HOURS)
   }
 
   // Set the parking costs
-  if (o.modes.indexOf('car') !== -1 || o.modes.indexOf('car_park') !== -1) {
-    o.carCost = this.rates.mileageRate * (o.driveDistance * METERS_TO_MILES) + this.rates.carParkingCost
-    o.cost += o.carCost
-    o.emissions = o.driveDistance / this.rates.mpg * CO2_PER_GALLON
+  if (option.modes.indexOf('car') !== -1 || option.modes.indexOf('car_park') !== -1) {
+    option.carCost = this.rates.mileageRate * (option.driveDistance * METERS_TO_MILES) + this.rates.carParkingCost
+    option.cost += option.carCost
+    option.emissions = option.driveDistance / this.rates.mpg * CO2_PER_GALLON
   }
 
   // unique modes only
-  o.modes = o.modes.reduce(function (modes, mode) {
+  option.modes = option.modes.reduce(function (modes, mode) {
     return modes.indexOf(mode) === -1 ? modes.concat(mode) : modes
   }, [])
 
   // Total calories
-  o.calories = o.bikeCalories + o.walkCalories
+  option.calories = option.bikeCalories + option.walkCalories
 
-  return o
+  return option
 }
 
-function addStreetEdges (o, mode, streetEdges) {
+function addStreetEdges (option, mode, streetEdges) {
   if (!streetEdges) return
-  o.modes.push(mode)
+  option.modes.push(mode)
 
   switch (mode) {
     case 'car':
     case 'car_park':
-      o.driveDistance += streetEdgeDistanceForMode(streetEdges, 'car')
+      option.driveDistance += streetEdgeDistanceForMode(streetEdges, 'car')
       break
     case 'bicycle':
-      o.bikeDistance += streetEdgeDistanceForMode(streetEdges, 'bicycle')
+      option.bikeDistance += streetEdgeDistanceForMode(streetEdges, 'bicycle')
       break
     case 'bicycle_rent':
-      o.modes.push('walk')
-      o.bikeDistance += streetEdgeDistanceForMode(streetEdges, 'bicycle')
-      o.walkDistance += streetEdgeDistanceForMode(streetEdges, 'walk')
+      option.modes.push('walk')
+      option.bikeDistance += streetEdgeDistanceForMode(streetEdges, 'bicycle')
+      option.walkDistance += streetEdgeDistanceForMode(streetEdges, 'walk')
       break
     case 'walk':
-      o.walkDistance += streetEdgeDistanceForMode(streetEdges, 'walk')
+      option.walkDistance += streetEdgeDistanceForMode(streetEdges, 'walk')
       break
   }
 }
 
 function streetEdgeDistanceForMode (streetEdges, mode) {
-  var currentMode = 'walk'
+  let currentMode = 'walk'
   return streetEdges.reduce(function (distance, step) {
     if (step.mode) {
       currentMode = step.mode.toLowerCase()
@@ -319,6 +314,6 @@ function applyFactor (v, f) {
 }
 
 function merge (a, b) {
-  for (var k in b) a[k] = b[k]
+  for (const k in b) a[k] = b[k]
   return a
 }
